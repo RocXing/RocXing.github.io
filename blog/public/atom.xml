@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[RocXing' BLOG]]></title>
+  
+  <link href="/blog/public/atom.xml" rel="self"/>
+  <link href="http://rocxing.github.io/blog/public/"/>
+  <updated>2015-08-18T08:17:53.840Z</updated>
+  <id>http://rocxing.github.io/blog/public/</id>
+  
+  <author>
+    <name><![CDATA[RocXing]]></name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[我的博客上线啦]]></title>
+    <link href="http://rocxing.github.io/blog/public/2015/08/18/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E4%B8%8A%E7%BA%BF%E5%95%A6/"/>
+    <id>http://rocxing.github.io/blog/public/2015/08/18/我的博客上线啦/</id>
+    <published>2015-08-18T07:59:11.000Z</published>
+    <updated>2015-08-18T08:17:53.840Z</updated>
+    <content type="html"><![CDATA[<h2 id="2015-8-18，我的博客终于上线了">2015.8.18，我的博客终于上线了</h2><p>不过还不大习惯Markdown的语法=.=<br>接下来熟悉一下语法应该就可以写文章了<br>总之先放到github上去。。。。  </p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="2015-8-18，我的博客终于上线了">2015.8.18，我的博客终于上线了</h2><p>不过还不大习惯Markdown的语法=.=<br>接下来熟悉一下语法应该就可以写文章了<br>总之先放到github上去。。。。  </p>
+]]>
+    </summary>
+    
+      <category term="博客" scheme="http://rocxing.github.io/blog/public/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+      <category term="New" scheme="http://rocxing.github.io/blog/public/categories/New/"/>
+    
+  </entry>
+  
+</feed>
