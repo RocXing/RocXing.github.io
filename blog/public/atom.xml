@@ -4,7 +4,7 @@
   
   <link href="/blog/public/atom.xml" rel="self"/>
   <link href="http://rocxing.github.io/blog/public/"/>
-  <updated>2015-08-18T08:17:53.840Z</updated>
+  <updated>2015-08-20T04:43:34.568Z</updated>
   <id>http://rocxing.github.io/blog/public/</id>
   
   <author>
@@ -13,6 +13,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[git ^和~]]></title>
+    <link href="http://rocxing.github.io/blog/public/2015/08/20/git%20%5E%E5%92%8C~/"/>
+    <id>http://rocxing.github.io/blog/public/2015/08/20/git ^和~/</id>
+    <published>2015-08-20T04:30:11.000Z</published>
+    <updated>2015-08-20T04:43:34.568Z</updated>
+    <content type="html"><![CDATA[<p>有时候为了方便，我们经常使用~与^的运算符号来引用git的某一次提交。git仓库中的每一次提交都是一个节点，形成了一颗树状结构。因此，我们只需要指明第几个前驱节点，就可以轻松的引用前驱节点的提交。有了^和~，我们就不用每次都使用冗长的提交哈希值了。  </p>
+<p>如：</p>
+<p><code>$ git revert HEAD~1</code></p>
+<p><code>$ git checkout HEAD^^2</code></p>
+<h3 id="^和~总结如下：">^和~总结如下：</h3><ol>
+<li><p>“^”代表父提交，当一个提交有多个父提交时，可以通过在“^”后面跟上一个数字，表示第几个父提交，“^”相当于是“^1”的省略。</p>
+</li>
+<li><p>“~<n>”相当于连续的n个“^”。</n></p>
+</li>
+<li><p>checkout只会移动HEAD指针，reset会改变HEAD的引用值。</p>
+</li>
+</ol>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>有时候为了方便，我们经常使用~与^的运算符号来引用git的某一次提交。git仓库中的每一次提交都是一个节点，形成了一颗树状结构。因此，我们只需要指明第几个前驱节点，就可以轻松的引用前驱节点的提交。有了^和~，我们就不用每次都使用冗长的提交哈希值了。  </p>
+<p>如：<]]>
+    </summary>
+    
+      <category term="git" scheme="http://rocxing.github.io/blog/public/tags/git/"/>
+    
+      <category term="git" scheme="http://rocxing.github.io/blog/public/categories/git/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[我的博客上线啦]]></title>

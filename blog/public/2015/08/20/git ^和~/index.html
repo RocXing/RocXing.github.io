@@ -5,23 +5,38 @@
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="RocXing&#39; BLOG">
-    <title>我的博客上线啦 - RocXing&#39; BLOG</title>
+    <title>git ^和~ - RocXing&#39; BLOG</title>
     <meta name="author" content="RocXing">
     <meta name="description" content="RocXing&#39; BLOG">
     
     
         <link rel="alternative" type="application/atom+xml" title="RSS" href="/blog/public/atom.xml">
     
-    <meta name="description" content="2015.8.18，我的博客终于上线了不过还不大习惯Markdown的语法=.=接下来熟悉一下语法应该就可以写文章了总之先放到github上去。。。。">
+    <meta name="description" content="有时候为了方便，我们经常使用~与^的运算符号来引用git的某一次提交。git仓库中的每一次提交都是一个节点，形成了一颗树状结构。因此，我们只需要指明第几个前驱节点，就可以轻松的引用前驱节点的提交。有了^和~，我们就不用每次都使用冗长的提交哈希值了。  
+如：
+$ git revert HEAD~1
+$ git checkout HEAD^^2
+^和~总结如下：
+“^”代表父提交，当一个提交有多个父">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="我的博客上线啦">
-<meta property="og:url" content="http://rocxing.github.io/blog/public/2015/08/18/我的博客上线啦/index.html">
+<meta property="og:title" content="git ^和~">
+<meta property="og:url" content="http://rocxing.github.io/blog/public/2015/08/20/git ^和~/index.html">
 <meta property="og:site_name" content="RocXing' BLOG">
-<meta property="og:description" content="2015.8.18，我的博客终于上线了不过还不大习惯Markdown的语法=.=接下来熟悉一下语法应该就可以写文章了总之先放到github上去。。。。">
-<meta property="og:updated_time" content="2015-08-18T08:17:53.840Z">
+<meta property="og:description" content="有时候为了方便，我们经常使用~与^的运算符号来引用git的某一次提交。git仓库中的每一次提交都是一个节点，形成了一颗树状结构。因此，我们只需要指明第几个前驱节点，就可以轻松的引用前驱节点的提交。有了^和~，我们就不用每次都使用冗长的提交哈希值了。  
+如：
+$ git revert HEAD~1
+$ git checkout HEAD^^2
+^和~总结如下：
+“^”代表父提交，当一个提交有多个父">
+<meta property="og:updated_time" content="2015-08-20T04:43:34.568Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="我的博客上线啦">
-<meta name="twitter:description" content="2015.8.18，我的博客终于上线了不过还不大习惯Markdown的语法=.=接下来熟悉一下语法应该就可以写文章了总之先放到github上去。。。。">
+<meta name="twitter:title" content="git ^和~">
+<meta name="twitter:description" content="有时候为了方便，我们经常使用~与^的运算符号来引用git的某一次提交。git仓库中的每一次提交都是一个节点，形成了一颗树状结构。因此，我们只需要指明第几个前驱节点，就可以轻松的引用前驱节点的提交。有了^和~，我们就不用每次都使用冗长的提交哈希值了。  
+如：
+$ git revert HEAD~1
+$ git checkout HEAD^^2
+^和~总结如下：
+“^”代表父提交，当一个提交有多个父">
     
     
     
@@ -140,16 +155,16 @@
     
         <div class="post-header main-content-wrap">
     
-        <h1 class="post-title" itemprop="headline">我的博客上线啦</h1>
+        <h1 class="post-title" itemprop="headline">git ^和~</h1>
     
     <div class="post-meta">
-    <time  itemprop="datePublished" content="Tue Aug 18 2015 15:59:11 GMT+0800">
-        Aug 18, 2015
+    <time  itemprop="datePublished" content="Thu Aug 20 2015 12:30:11 GMT+0800">
+        Aug 20, 2015
     </time>
     
         <span>in </span>
         
-    <a class="category-link" href="/blog/public/categories/New/">New</a>
+    <a class="category-link" href="/blog/public/categories/git/">git</a>
 
 
     
@@ -158,7 +173,18 @@
     
     <div class="post-content markdown main-content-wrap" itemprop="articleBody">
         
-            <h2 id="2015-8-18，我的博客终于上线了">2015.8.18，我的博客终于上线了</h2><p>不过还不大习惯Markdown的语法=.=<br>接下来熟悉一下语法应该就可以写文章了<br>总之先放到github上去。。。。  </p>
+            <p>有时候为了方便，我们经常使用~与^的运算符号来引用git的某一次提交。git仓库中的每一次提交都是一个节点，形成了一颗树状结构。因此，我们只需要指明第几个前驱节点，就可以轻松的引用前驱节点的提交。有了^和~，我们就不用每次都使用冗长的提交哈希值了。  </p>
+<p>如：</p>
+<p><code>$ git revert HEAD~1</code></p>
+<p><code>$ git checkout HEAD^^2</code></p>
+<h3 id="^和~总结如下：">^和~总结如下：</h3><ol>
+<li><p>“^”代表父提交，当一个提交有多个父提交时，可以通过在“^”后面跟上一个数字，表示第几个父提交，“^”相当于是“^1”的省略。</p>
+</li>
+<li><p>“~<n>”相当于连续的n个“^”。</n></p>
+</li>
+<li><p>checkout只会移动HEAD指针，reset会改变HEAD的引用值。</p>
+</li>
+</ol>
 
         
         
@@ -170,7 +196,7 @@
             <div class="post-footer-tags">
                 <span class="text-color-light text-small">TAGGED IN</span><br/>
                 
-    <a class="tag tag--primary tag--small t-link" href="/blog/public/tags/博客/">博客</a>
+    <a class="tag tag--primary tag--small t-link" href="/blog/public/tags/git/">git</a>
 
             </div>
         
@@ -179,7 +205,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/blog/public/2015/08/20/git ^和~/"  data-tooltip="git ^和~">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -187,7 +213,7 @@
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--disabled">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/blog/public/2015/08/18/我的博客上线啦/" data-tooltip="我的博客上线啦">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
                     <i class="fa fa-angle-right"></i>
@@ -202,17 +228,17 @@
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://rocxing.github.io/blog/public/2015/08/18/我的博客上线啦/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://rocxing.github.io/blog/public/2015/08/20/git ^和~/">
                 <i class="fa fa-google-plus"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://rocxing.github.io/blog/public/2015/08/18/我的博客上线啦/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://rocxing.github.io/blog/public/2015/08/20/git ^和~/">
                 <i class="fa fa-facebook-official"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://rocxing.github.io/blog/public/2015/08/18/我的博客上线啦/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://rocxing.github.io/blog/public/2015/08/20/git ^和~/">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
@@ -252,7 +278,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/blog/public/2015/08/20/git ^和~/"  data-tooltip="git ^和~">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -260,7 +286,7 @@
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--disabled">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/blog/public/2015/08/18/我的博客上线啦/" data-tooltip="我的博客上线啦">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
                     <i class="fa fa-angle-right"></i>
@@ -275,17 +301,17 @@
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://rocxing.github.io/blog/public/2015/08/18/我的博客上线啦/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://rocxing.github.io/blog/public/2015/08/20/git ^和~/">
                 <i class="fa fa-google-plus"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://rocxing.github.io/blog/public/2015/08/18/我的博客上线啦/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://rocxing.github.io/blog/public/2015/08/20/git ^和~/">
                 <i class="fa fa-facebook-official"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://rocxing.github.io/blog/public/2015/08/18/我的博客上线啦/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://rocxing.github.io/blog/public/2015/08/20/git ^和~/">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
@@ -309,17 +335,17 @@
                 <div id="share-options-bar" class="share-options-bar" data-behavior="1">
     <ul class="share-options">
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://rocxing.github.io/blog/public/2015/08/18/我的博客上线啦/">
+            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://rocxing.github.io/blog/public/2015/08/20/git ^和~/">
                 <i class="fa fa-google-plus"></i><span class="">Share on Google Plus</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://rocxing.github.io/blog/public/2015/08/18/我的博客上线啦/">
+            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://rocxing.github.io/blog/public/2015/08/20/git ^和~/">
                 <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://rocxing.github.io/blog/public/2015/08/18/我的博客上线啦/">
+            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://rocxing.github.io/blog/public/2015/08/20/git ^和~/">
                 <i class="fa fa-twitter"></i><span>Share on Twitter</span>
             </a>
         </li>
