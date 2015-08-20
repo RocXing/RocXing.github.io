@@ -16,8 +16,8 @@
   
   <entry>
     <title><![CDATA[git ^和~]]></title>
-    <link href="http://rocxing.github.io/blog/public/2015/08/20/git%20%5E%E5%92%8C~/"/>
-    <id>http://rocxing.github.io/blog/public/2015/08/20/git ^和~/</id>
+    <link href="http://rocxing.github.io/blog/public/2015/08/20/git%E5%BC%95%E7%94%A8%E7%88%B6%E8%8A%82%E7%82%B9/"/>
+    <id>http://rocxing.github.io/blog/public/2015/08/20/git引用父节点/</id>
     <published>2015-08-20T04:30:11.000Z</published>
     <updated>2015-08-20T04:43:34.568Z</updated>
     <content type="html"><![CDATA[<p>有时候为了方便，我们经常使用~与^的运算符号来引用git的某一次提交。git仓库中的每一次提交都是一个节点，形成了一颗树状结构。因此，我们只需要指明第几个前驱节点，就可以轻松的引用前驱节点的提交。有了^和~，我们就不用每次都使用冗长的提交哈希值了。  </p>
