@@ -5,38 +5,36 @@
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="RocXing&#39; BLOG">
-    <title>git ^和~ - RocXing&#39; BLOG</title>
+    <title>Python缩进tips - RocXing&#39; BLOG</title>
     <meta name="author" content="RocXing">
     <meta name="description" content="RocXing&#39; BLOG">
     
     
         <link rel="alternative" type="application/atom+xml" title="RSS" href="/blog/public/atom.xml">
     
-    <meta name="description" content="有时候为了方便，我们经常使用~与^的运算符号来引用git的某一次提交。git仓库中的每一次提交都是一个节点，形成了一颗树状结构。因此，我们只需要指明第几个前驱节点，就可以轻松的引用前驱节点的提交。有了^和~，我们就不用每次都使用冗长的提交哈希值了。  
-如：
-$ git revert HEAD~1
-$ git checkout HEAD^^2
-^和~总结如下：
-“^”代表父提交，当一个提交有多个父">
+    <meta name="description" content="Python有着严格的代码缩进，这使得整个语言具有更高的可读性，代码看起来更加优美，赏心悦目。但这种缩进控制的嵌套语言有一些小“坑”需要注意。
+下面是一段tab制表符和空格缩进混用的例子：
+
+这段代码的意思很简单，理论上是没有输出结果的，因为1和2的打印输出都在if判断中，而其条件为False不会执行。然而执行这段代码的结果是输出了2！
+我们可以注意到，print &amp;#39;1&amp;#39;前面为2个">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="git ^和~">
-<meta property="og:url" content="http://rocxing.github.io/blog/public/2015/08/20/git引用父节点/index.html">
+<meta property="og:title" content="Python缩进tips">
+<meta property="og:url" content="http://rocxing.github.io/blog/public/2015/08/24/Python缩进tips/index.html">
 <meta property="og:site_name" content="RocXing' BLOG">
-<meta property="og:description" content="有时候为了方便，我们经常使用~与^的运算符号来引用git的某一次提交。git仓库中的每一次提交都是一个节点，形成了一颗树状结构。因此，我们只需要指明第几个前驱节点，就可以轻松的引用前驱节点的提交。有了^和~，我们就不用每次都使用冗长的提交哈希值了。  
-如：
-$ git revert HEAD~1
-$ git checkout HEAD^^2
-^和~总结如下：
-“^”代表父提交，当一个提交有多个父">
-<meta property="og:updated_time" content="2015-08-20T04:43:34.568Z">
+<meta property="og:description" content="Python有着严格的代码缩进，这使得整个语言具有更高的可读性，代码看起来更加优美，赏心悦目。但这种缩进控制的嵌套语言有一些小“坑”需要注意。
+下面是一段tab制表符和空格缩进混用的例子：
+
+这段代码的意思很简单，理论上是没有输出结果的，因为1和2的打印输出都在if判断中，而其条件为False不会执行。然而执行这段代码的结果是输出了2！
+我们可以注意到，print &amp;#39;1&amp;#39;前面为2个">
+<meta property="og:image" content="http://rocxing.github.io/blog/public/blog/public/2015/08/24/Python缩进tips/code.png">
+<meta property="og:updated_time" content="2015-08-24T08:08:26.873Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git ^和~">
-<meta name="twitter:description" content="有时候为了方便，我们经常使用~与^的运算符号来引用git的某一次提交。git仓库中的每一次提交都是一个节点，形成了一颗树状结构。因此，我们只需要指明第几个前驱节点，就可以轻松的引用前驱节点的提交。有了^和~，我们就不用每次都使用冗长的提交哈希值了。  
-如：
-$ git revert HEAD~1
-$ git checkout HEAD^^2
-^和~总结如下：
-“^”代表父提交，当一个提交有多个父">
+<meta name="twitter:title" content="Python缩进tips">
+<meta name="twitter:description" content="Python有着严格的代码缩进，这使得整个语言具有更高的可读性，代码看起来更加优美，赏心悦目。但这种缩进控制的嵌套语言有一些小“坑”需要注意。
+下面是一段tab制表符和空格缩进混用的例子：
+
+这段代码的意思很简单，理论上是没有输出结果的，因为1和2的打印输出都在if判断中，而其条件为False不会执行。然而执行这段代码的结果是输出了2！
+我们可以注意到，print &amp;#39;1&amp;#39;前面为2个">
     
     
     
@@ -155,16 +153,16 @@ $ git checkout HEAD^^2
     
         <div class="post-header main-content-wrap">
     
-        <h1 class="post-title" itemprop="headline">git ^和~</h1>
+        <h1 class="post-title" itemprop="headline">Python缩进tips</h1>
     
     <div class="post-meta">
-    <time  itemprop="datePublished" content="Thu Aug 20 2015 12:30:11 GMT+0800">
-        Aug 20, 2015
+    <time  itemprop="datePublished" content="Mon Aug 24 2015 15:28:08 GMT+0800">
+        Aug 24, 2015
     </time>
     
         <span>in </span>
         
-    <a class="category-link" href="/blog/public/categories/git/">git</a>
+    <a class="category-link" href="/blog/public/categories/Python/">Python</a>
 
 
     
@@ -173,18 +171,12 @@ $ git checkout HEAD^^2
     
     <div class="post-content markdown main-content-wrap" itemprop="articleBody">
         
-            <p>有时候为了方便，我们经常使用~与^的运算符号来引用git的某一次提交。git仓库中的每一次提交都是一个节点，形成了一颗树状结构。因此，我们只需要指明第几个前驱节点，就可以轻松的引用前驱节点的提交。有了^和~，我们就不用每次都使用冗长的提交哈希值了。  </p>
-<p>如：</p>
-<p><code>$ git revert HEAD~1</code></p>
-<p><code>$ git checkout HEAD^^2</code></p>
-<h3 id="^和~总结如下：">^和~总结如下：</h3><ol>
-<li><p>“^”代表父提交，当一个提交有多个父提交时，可以通过在“^”后面跟上一个数字，表示第几个父提交，“^”相当于是“^1”的省略。</p>
-</li>
-<li><p>“~<n>”相当于连续的n个“^”。</n></p>
-</li>
-<li><p>checkout只会移动HEAD指针，reset会改变HEAD的引用值。</p>
-</li>
-</ol>
+            <p>Python有着严格的代码缩进，这使得整个语言具有更高的可读性，代码看起来更加优美，赏心悦目。<br>但这种缩进控制的嵌套语言有一些小“坑”需要注意。</p>
+<p>下面是一段tab制表符和空格缩进混用的例子：</p>
+<img src="/blog/public/2015/08/24/Python缩进tips/code.png" alt="[代码]" title="[代码]">
+<p>这段代码的意思很简单，理论上是没有输出结果的，因为1和2的打印输出都在if判断中，而其条件为False不会执行。然而执行这段代码的结果是输出了2！</p>
+<p>我们可以注意到，<code>print &#39;1&#39;</code>前面为2个<strong>tab制表符</strong>的缩进，而<code>print &#39;2&#39;</code>前面为8个<strong>空格</strong>的缩进。对于python解释器，它认为8个空格才是一个缩进而非我们约定俗成的4个，因此<code>print &#39;2&#39;</code>前面相当于只有一个tab制表符，最终输出了2。</p>
+<p>为了避免这种代码缩进导致的逻辑错误，推荐使用Pycharm IDE，其具有PEP8代码规范的警告提示，并将tab自动替换为4个空格，从而避免了tab制表符和空格缩进的混用问题。</p>
 
         
         
@@ -196,7 +188,7 @@ $ git checkout HEAD^^2
             <div class="post-footer-tags">
                 <span class="text-color-light text-small">TAGGED IN</span><br/>
                 
-    <a class="tag tag--primary tag--small t-link" href="/blog/public/tags/git/">git</a>
+    <a class="tag tag--primary tag--small t-link" href="/blog/public/tags/Python/">Python</a>
 
             </div>
         
@@ -205,7 +197,7 @@ $ git checkout HEAD^^2
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/blog/public/2015/08/24/Python缩进tips/"  data-tooltip="Python缩进tips">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -213,7 +205,7 @@ $ git checkout HEAD^^2
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/blog/public/2015/08/18/我的博客上线啦/" data-tooltip="我的博客上线啦">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/blog/public/2015/08/20/git引用父节点/" data-tooltip="git ^和~">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
                     <i class="fa fa-angle-right"></i>
@@ -228,17 +220,17 @@ $ git checkout HEAD^^2
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://rocxing.github.io/blog/public/2015/08/20/git引用父节点/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://rocxing.github.io/blog/public/2015/08/24/Python缩进tips/">
                 <i class="fa fa-google-plus"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://rocxing.github.io/blog/public/2015/08/20/git引用父节点/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://rocxing.github.io/blog/public/2015/08/24/Python缩进tips/">
                 <i class="fa fa-facebook-official"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://rocxing.github.io/blog/public/2015/08/20/git引用父节点/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://rocxing.github.io/blog/public/2015/08/24/Python缩进tips/">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
@@ -278,7 +270,7 @@ $ git checkout HEAD^^2
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/blog/public/2015/08/24/Python缩进tips/"  data-tooltip="Python缩进tips">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -286,7 +278,7 @@ $ git checkout HEAD^^2
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/blog/public/2015/08/18/我的博客上线啦/" data-tooltip="我的博客上线啦">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/blog/public/2015/08/20/git引用父节点/" data-tooltip="git ^和~">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
                     <i class="fa fa-angle-right"></i>
@@ -301,17 +293,17 @@ $ git checkout HEAD^^2
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://rocxing.github.io/blog/public/2015/08/20/git引用父节点/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://rocxing.github.io/blog/public/2015/08/24/Python缩进tips/">
                 <i class="fa fa-google-plus"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://rocxing.github.io/blog/public/2015/08/20/git引用父节点/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://rocxing.github.io/blog/public/2015/08/24/Python缩进tips/">
                 <i class="fa fa-facebook-official"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://rocxing.github.io/blog/public/2015/08/20/git引用父节点/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://rocxing.github.io/blog/public/2015/08/24/Python缩进tips/">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
@@ -335,17 +327,17 @@ $ git checkout HEAD^^2
                 <div id="share-options-bar" class="share-options-bar" data-behavior="1">
     <ul class="share-options">
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://rocxing.github.io/blog/public/2015/08/20/git引用父节点/">
+            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://rocxing.github.io/blog/public/2015/08/24/Python缩进tips/">
                 <i class="fa fa-google-plus"></i><span class="">Share on Google Plus</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://rocxing.github.io/blog/public/2015/08/20/git引用父节点/">
+            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://rocxing.github.io/blog/public/2015/08/24/Python缩进tips/">
                 <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://rocxing.github.io/blog/public/2015/08/20/git引用父节点/">
+            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://rocxing.github.io/blog/public/2015/08/24/Python缩进tips/">
                 <i class="fa fa-twitter"></i><span>Share on Twitter</span>
             </a>
         </li>

@@ -4,7 +4,7 @@
   
   <link href="/blog/public/atom.xml" rel="self"/>
   <link href="http://rocxing.github.io/blog/public/"/>
-  <updated>2015-08-20T04:43:34.568Z</updated>
+  <updated>2015-08-24T08:08:26.873Z</updated>
   <id>http://rocxing.github.io/blog/public/</id>
   
   <author>
@@ -13,6 +13,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Python缩进tips]]></title>
+    <link href="http://rocxing.github.io/blog/public/2015/08/24/Python%E7%BC%A9%E8%BF%9Btips/"/>
+    <id>http://rocxing.github.io/blog/public/2015/08/24/Python缩进tips/</id>
+    <published>2015-08-24T07:28:08.000Z</published>
+    <updated>2015-08-24T08:08:26.873Z</updated>
+    <content type="html"><![CDATA[<p>Python有着严格的代码缩进，这使得整个语言具有更高的可读性，代码看起来更加优美，赏心悦目。<br>但这种缩进控制的嵌套语言有一些小“坑”需要注意。</p>
+<p>下面是一段tab制表符和空格缩进混用的例子：</p>
+<img src="/blog/public/2015/08/24/Python缩进tips/code.png" alt="[代码]" title="[代码]">
+<p>这段代码的意思很简单，理论上是没有输出结果的，因为1和2的打印输出都在if判断中，而其条件为False不会执行。然而执行这段代码的结果是输出了2！</p>
+<p>我们可以注意到，<code>print &#39;1&#39;</code>前面为2个<strong>tab制表符</strong>的缩进，而<code>print &#39;2&#39;</code>前面为8个<strong>空格</strong>的缩进。对于python解释器，它认为8个空格才是一个缩进而非我们约定俗成的4个，因此<code>print &#39;2&#39;</code>前面相当于只有一个tab制表符，最终输出了2。</p>
+<p>为了避免这种代码缩进导致的逻辑错误，推荐使用Pycharm IDE，其具有PEP8代码规范的警告提示，并将tab自动替换为4个空格，从而避免了tab制表符和空格缩进的混用问题。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Python有着严格的代码缩进，这使得整个语言具有更高的可读性，代码看起来更加优美，赏心悦目。<br>但这种缩进控制的嵌套语言有一些小“坑”需要注意。</p>
+<p>下面是一段tab制表符和空格缩进混用的例子：</p>
+<img src="/blog/public/2015]]>
+    </summary>
+    
+      <category term="Python" scheme="http://rocxing.github.io/blog/public/tags/Python/"/>
+    
+      <category term="Python" scheme="http://rocxing.github.io/blog/public/categories/Python/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[git ^和~]]></title>
