@@ -14,29 +14,26 @@
     
     <meta name="description" content="有时候为了方便，我们经常使用~与^的运算符号来引用git的某一次提交。git仓库中的每一次提交都是一个节点，形成了一颗树状结构。因此，我们只需要指明第几个前驱节点，就可以轻松的引用前驱节点的提交。有了^和~，我们就不用每次都使用冗长的提交哈希值了。  
 如：
-$ git revert HEAD~1
-$ git checkout HEAD^^2
+12$ git revert HEAD~1$ git checkout HEAD^^2
 ^和~总结如下：
-“^”代表父提交，当一个提交有多个父">
+“^”代表父提交，当一个提交有多个">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="git ^和~">
 <meta property="og:url" content="http://rocxing.github.io/blog/public/2015/08/20/git引用父节点/index.html">
 <meta property="og:site_name" content="RocXing' BLOG">
 <meta property="og:description" content="有时候为了方便，我们经常使用~与^的运算符号来引用git的某一次提交。git仓库中的每一次提交都是一个节点，形成了一颗树状结构。因此，我们只需要指明第几个前驱节点，就可以轻松的引用前驱节点的提交。有了^和~，我们就不用每次都使用冗长的提交哈希值了。  
 如：
-$ git revert HEAD~1
-$ git checkout HEAD^^2
+12$ git revert HEAD~1$ git checkout HEAD^^2
 ^和~总结如下：
-“^”代表父提交，当一个提交有多个父">
-<meta property="og:updated_time" content="2015-08-20T04:43:34.568Z">
+“^”代表父提交，当一个提交有多个">
+<meta property="og:updated_time" content="2015-08-26T03:37:15.362Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git ^和~">
 <meta name="twitter:description" content="有时候为了方便，我们经常使用~与^的运算符号来引用git的某一次提交。git仓库中的每一次提交都是一个节点，形成了一颗树状结构。因此，我们只需要指明第几个前驱节点，就可以轻松的引用前驱节点的提交。有了^和~，我们就不用每次都使用冗长的提交哈希值了。  
 如：
-$ git revert HEAD~1
-$ git checkout HEAD^^2
+12$ git revert HEAD~1$ git checkout HEAD^^2
 ^和~总结如下：
-“^”代表父提交，当一个提交有多个父">
+“^”代表父提交，当一个提交有多个">
     
     
     
@@ -175,8 +172,7 @@ $ git checkout HEAD^^2
         
             <p>有时候为了方便，我们经常使用~与^的运算符号来引用git的某一次提交。git仓库中的每一次提交都是一个节点，形成了一颗树状结构。因此，我们只需要指明第几个前驱节点，就可以轻松的引用前驱节点的提交。有了^和~，我们就不用每次都使用冗长的提交哈希值了。  </p>
 <p>如：</p>
-<p><code>$ git revert HEAD~1</code></p>
-<p><code>$ git checkout HEAD^^2</code></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git revert HEAD~<span class="number">1</span></span><br><span class="line">$ git checkout HEAD^^<span class="number">2</span></span><br></pre></td></tr></table></figure>
 <h3 id="^和~总结如下：">^和~总结如下：</h3><ol>
 <li><p>“^”代表父提交，当一个提交有多个父提交时，可以通过在“^”后面跟上一个数字，表示第几个父提交，“^”相当于是“^1”的省略。</p>
 </li>
