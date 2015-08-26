@@ -20,6 +20,9 @@
 
 <body>
 
+    <div class="preloader" id="preloader">
+        <img class="preloader_img" src="images/preloader.gif"/>
+    </div>
     <div id="screen">
         <div class="section section1">
         	<div class="title">
@@ -164,6 +167,7 @@
  
 <script>
 
+var preloader = $('#preloader');
 var sb_container = $('#sb-container');
 var section1_title_h1 = $(".section1 .title h1")
 var section1_title_h2 = $(".section1 .title h2");
@@ -184,6 +188,7 @@ $(function(){
 		continuousVertical:false,
 		verticalCentered:true,
 		afterRender:function(){
+			removePreLoader();
 			showWelcome();
 			sb_container.swatchbook( {
 				angleInc : -10,
@@ -232,6 +237,11 @@ $(function(){
 	}
 	);
 });
+
+function removePreLoader()
+{
+	preloader.css("display","none");
+}
 
 function showWelcome()
 {
