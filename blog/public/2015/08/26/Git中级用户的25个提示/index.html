@@ -16,7 +16,7 @@
 安装 Git 之后，你要做的第一件事情就是去配置你的名字和邮箱，因为每一次提交都需要这些信息：
 12$ git config --global user.name &quot;Some One&quot;$ git config --global user.email &quot;someone@gmail.com&quot;
 2. Git 是以指针为基础
-存储在 git 中的所有东西都包含在一个文件中。当">
+存储在 git 中的所有东西都包含在一个文件中。">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="Git中级用户的25个提示">
 <meta property="og:url" content="http://rocxing.github.io/blog/public/2015/08/26/Git中级用户的25个提示/index.html">
@@ -25,16 +25,17 @@
 安装 Git 之后，你要做的第一件事情就是去配置你的名字和邮箱，因为每一次提交都需要这些信息：
 12$ git config --global user.name &quot;Some One&quot;$ git config --global user.email &quot;someone@gmail.com&quot;
 2. Git 是以指针为基础
-存储在 git 中的所有东西都包含在一个文件中。当">
+存储在 git 中的所有东西都包含在一个文件中。">
 <meta property="og:image" content="http://rocxing.github.io/blog/public/blog/public/2015/08/26/Git中级用户的25个提示/git.png">
-<meta property="og:updated_time" content="2015-08-26T03:35:41.438Z">
+<meta property="og:updated_time" content="2016-06-28T07:05:03.016Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git中级用户的25个提示">
 <meta name="twitter:description" content="基本提示1. 安装之后第一步
 安装 Git 之后，你要做的第一件事情就是去配置你的名字和邮箱，因为每一次提交都需要这些信息：
 12$ git config --global user.name &quot;Some One&quot;$ git config --global user.email &quot;someone@gmail.com&quot;
 2. Git 是以指针为基础
-存储在 git 中的所有东西都包含在一个文件中。当">
+存储在 git 中的所有东西都包含在一个文件中。">
+<meta name="twitter:image" content="http://rocxing.github.io/blog/public/blog/public/2015/08/26/Git中级用户的25个提示/git.png">
     
     
     
@@ -44,7 +45,7 @@
     
     
     <!--STYLES-->
-    <link rel="stylesheet" href="/blog/public/assets/css/style.min.css" type="text/css">
+    <link rel="stylesheet" href="/blog/public/assets/css/style.min.css">
     <!--STYLES END-->
     
 </head>
@@ -57,7 +58,7 @@
         <a class="header-title-link" href="/blog/public/ ">RocXing&#39; BLOG</a>
     </h1>
     
-        <a class="header-right-picture" href="/#about">
+        <a class="header-right-picture" href="/blog/public/#about">
             <img class="header-picture" src="/blog/public/assets/images/dog.jpg"/>
         </a>
     
@@ -65,7 +66,7 @@
             <nav id="sidebar" data-behavior="1">
     
     <div class="sidebar-profile">
-        <a href="/#about">
+        <a href="/blog/public/#about">
             
             <img class="sidebar-profile-picture" src="/blog/public/assets/images/dog.jpg"/>
             
@@ -123,7 +124,7 @@
         <li class="sidebar-button">
             
                 <a  class="sidebar-button-link "
-                    href="/blog/public/#about
+                    href="#about
                             ">
             
                     <i class="sidebar-button-icon fa fa-lg fa-question"></i>
@@ -172,9 +173,9 @@
     <div class="post-content markdown main-content-wrap" itemprop="articleBody">
         
             <img src="/blog/public/2015/08/26/Git中级用户的25个提示/git.png" alt="[Git]" title="[Git]">
-<h1 id="基本提示">基本提示</h1><p><strong>1. 安装之后第一步</strong></p>
+<h1 id="基本提示"><a href="#基本提示" class="headerlink" title="基本提示"></a>基本提示</h1><p><strong>1. 安装之后第一步</strong></p>
 <p>安装 Git 之后，你要做的第一件事情就是去配置你的名字和邮箱，因为每一次提交都需要这些信息：</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user<span class="class">.name</span> <span class="string">"Some One"</span></span><br><span class="line">$ git config --global user<span class="class">.email</span> <span class="string">"someone@gmail.com"</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git config --global user<span class="selector-class">.name</span> <span class="string">"Some One"</span></div><div class="line">$ git config --global user<span class="selector-class">.email</span> <span class="string">"someone@gmail.com"</span></div></pre></td></tr></table></figure>
 <p><strong>2. Git 是以指针为基础</strong></p>
 <p>存储在 git 中的所有东西都包含在一个文件中。当你提交的时候，git 会创建一个包含提交消息和相关数据的文件（名称、邮件、日期/时间、上一次提交等等），并将其链接到一个树形文件。树形文件包含一个对象列表或者其它树。对象或二进制大数据对象（BLOB）是提交的真正内容（一个文件，如果你愿意，虽然文件名没有存储在对象中，但会存储在树中）。所有这些文件都以对象的 SHA-1 哈希为文件名进行存储。</p>
 <p>分支和标签只是一些文件，这些文件包含（基本上）一个指向提交的 SHA-1 哈希值。使用这些引用在灵活性和速度上均有大幅提升，创建一个新的分支就和创建一个文件一样简单，只是这个文件带有分支名称和一个包含指向提交（你从这个提交建立分支）的SHA-1哈希值。当然，当你使用 Git 命令行工具（或一个图形用户界面）时，你永远也不会这么做，但它就是这么简单。</p>
@@ -184,166 +185,166 @@
 <p>当在日志文件中查看一个合并提交的消息时，你会看到两个 parents（与正常提交相比）。第一个parent 是你所在的分支，第二个 parents 是你并入的分支。</p>
 <p><strong>4. 合并冲突</strong></p>
 <p>到目前为止，我确信你一定有一个合并冲突需要解决。通常情况下，通过编辑该文件，删除文件中的&lt;&lt;&lt;&lt;, ====, &gt;&gt;&gt;&gt;标记，然后保存你需要保留的代码就可以了。有时候，在任何变更之前查看代码都是一个值得推荐的做法，比如，在你对两个有冲突的分支采取行动之前。这是又一个命令：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$ git diff --merge</span><br><span class="line">diff --cc dummy.rb  </span><br><span class="line">index <span class="number">5175</span>dde,<span class="number">0</span>c65895.<span class="number">.4</span>a00477  </span><br><span class="line">--- a/dummy.rb</span><br><span class="line">+++ b/dummy.rb</span><br><span class="line">@@@ -<span class="number">1</span>,<span class="number">5</span> -<span class="number">1</span>,<span class="number">5</span> +<span class="number">1</span>,<span class="number">5</span> @@@</span><br><span class="line">  <span class="keyword">class</span> MyFoo</span><br><span class="line">    def say</span><br><span class="line">-     <span class="built_in">puts</span> <span class="string">"Bonjour"</span></span><br><span class="line"> -    <span class="built_in">puts</span> <span class="string">"Hello world"</span></span><br><span class="line">++    <span class="built_in">puts</span> <span class="string">"Annyong Haseyo"</span></span><br><span class="line">    end</span><br><span class="line">  end</span><br></pre></td></tr></table></figure>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">$ git diff --merge</div><div class="line">diff --cc dummy.rb  </div><div class="line">index <span class="number">5175</span>dde,<span class="number">0</span>c65895.<span class="number">.4</span>a00477  </div><div class="line">--- a/dummy.rb</div><div class="line">+++ b/dummy.rb</div><div class="line">@@@ <span class="number">-1</span>,<span class="number">5</span> <span class="number">-1</span>,<span class="number">5</span> +<span class="number">1</span>,<span class="number">5</span> @@@</div><div class="line">  class MyFoo</div><div class="line">    def say</div><div class="line">-     puts <span class="string">"Bonjour"</span></div><div class="line"> -    puts <span class="string">"Hello world"</span></div><div class="line">++    puts <span class="string">"Annyong Haseyo"</span></div><div class="line">    end</div><div class="line">  end</div></pre></td></tr></table></figure>
 <p>如果文件是二进制的，文件比较就不是那么容易了…你通常要做的是尝试每个版本的二进制文件，并决定使用哪一个（或者在二进制文件编辑器手动复制部分内容）。从一个特定分支下 pull 一个文件副本（如果你要合并主分支和分支132的话）：</p>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>git checkout master flash/foo.fla <span class="comment"># or...</span></span><br><span class="line"><span class="variable">$ </span>git checkout feature132 flash/foo.fla</span><br><span class="line"><span class="variable">$ </span><span class="comment"># Then...</span></span><br><span class="line"><span class="variable">$ </span>git add flash/foo.fla</span><br></pre></td></tr></table></figure>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$ </span>git checkout master flash/foo.fla <span class="comment"># or...</span></div><div class="line"><span class="variable">$ </span>git checkout feature132 flash/foo.fla</div><div class="line"><span class="variable">$ </span><span class="comment"># Then...</span></div><div class="line"><span class="variable">$ </span>git add flash/foo.fla</div></pre></td></tr></table></figure>
 <p>另一种方法是从 git 中查看这个文件 - 你能够以其他文件名的方式进行查看，然后将正确的文件（当你确定它是哪一个时）复制到正常的文件名中：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="operator"><span class="keyword">show</span> <span class="keyword">master</span>:flash/foo.fla &gt; <span class="keyword">master</span>-foo.fla</span><br><span class="line">$ git <span class="keyword">show</span> feature132:flash/foo.fla &gt; feature132-foo.fla</span><br><span class="line">$ # <span class="keyword">Check</span> <span class="keyword">out</span> <span class="keyword">master</span>-foo.fla <span class="keyword">and</span> feature132-foo.fla</span><br><span class="line">$ # Let<span class="string">'s say we decide that feature132'</span>s <span class="keyword">is</span> correct</span><br><span class="line">$ rm flash/foo.fla</span><br><span class="line">$ mv feature132-foo.fla flash/foo.fla</span><br><span class="line">$ rm <span class="keyword">master</span>-foo.fla</span><br><span class="line">$ git <span class="keyword">add</span> flash/foo.fla</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">$ git <span class="keyword">show</span> <span class="keyword">master</span>:flash/foo.fla &gt; <span class="keyword">master</span>-foo.fla</div><div class="line">$ git <span class="keyword">show</span> feature132:flash/foo.fla &gt; feature132-foo.fla</div><div class="line">$ # <span class="keyword">Check</span> <span class="keyword">out</span> <span class="keyword">master</span>-foo.fla <span class="keyword">and</span> feature132-foo.fla</div><div class="line">$ # Let<span class="string">'s say we decide that feature132'</span>s <span class="keyword">is</span> correct</div><div class="line">$ rm flash/foo.fla</div><div class="line">$ mv feature132-foo.fla flash/foo.fla</div><div class="line">$ rm <span class="keyword">master</span>-foo.fla</div><div class="line">$ git <span class="keyword">add</span> flash/foo.fla</div></pre></td></tr></table></figure>
 <p>更新：感谢 Carl 在早先的的博客评论中给与的提醒，你实际上能使用 “git checkout —ours flash/foo.fla” 和 “git checkout —theirs flash/foo.fla” 检出一个特定的版本而不需要记住你要合并到哪一个分支。我个人更喜欢更明确些，但是你可以随便选择…</p>
 <p>在解决了合并冲突问题之后（就像我上面所做的那样），请记得将这个文件添加给索引。</p>
-<h1 id="服务器、分支和标签">服务器、分支和标签</h1><p><strong>5. 远程服务器</strong></p>
+<h1 id="服务器、分支和标签"><a href="#服务器、分支和标签" class="headerlink" title="服务器、分支和标签"></a>服务器、分支和标签</h1><p><strong>5. 远程服务器</strong></p>
 <p>Git 最强大的功能之一是可以有一个以上的远程服务器（另一个事实，你总是可以运行一个本地仓库）。你不一定总是需要写访问权限，你可以从多个服务器中读取（用于合并），然后写到另一个服务器中。添加一个远程服务器很简单：</p>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>git remote add john git<span class="variable">@github</span>.<span class="symbol">com:</span>johnsomeone/someproject.git</span><br></pre></td></tr></table></figure>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$ </span>git remote add john git<span class="variable">@github</span>.<span class="symbol">com:</span>johnsomeone/someproject.git</div></pre></td></tr></table></figure>
 <p>如果你想查看远程服务器的相关信息，你可以这样做：</p>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># shows URLs of each remote server</span></span><br><span class="line"><span class="variable">$ </span>git remote -v</span><br><span class="line"> </span><br><span class="line"><span class="comment"># gives more details about each</span></span><br><span class="line"><span class="variable">$ </span>git remote show name</span><br></pre></td></tr></table></figure>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># shows URLs of each remote server</span></div><div class="line"><span class="variable">$ </span>git remote -v</div><div class="line"> </div><div class="line"><span class="comment"># gives more details about each</span></div><div class="line"><span class="variable">$ </span>git remote show name</div></pre></td></tr></table></figure>
 <p>你可以查看本地分支和远程分支之间的差别：</p>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>git diff master..john/master</span><br></pre></td></tr></table></figure>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git diff <span class="literal">master</span>..john/<span class="literal">master</span></div></pre></td></tr></table></figure>
 <p>你也能查看不在远程分支上的 HEAD 的变化：</p>
-<figure class="highlight erlang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git log remote/branch..</span><br><span class="line"># <span class="variable">Note</span>: no final refspec <span class="keyword">after</span> ..</span><br></pre></td></tr></table></figure>
+<figure class="highlight erlang"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git log remote/branch..</div><div class="line"># Note: no final refspec <span class="keyword">after</span> ..</div></pre></td></tr></table></figure>
 <p><strong>6. 标签</strong></p>
 <p>在 Git 中存在两种类型的标签 - 一个轻量级标签和一个注解标签。记着第二个提示中说过 Git 是基于指针的，二者的区别很简单。一个轻量级标签无非是一个指向提交的具名指针。你可以改变它并指向另一个提交。一个注解标签是一个指向标签对象的具名指针，这个标签对象拥有自己的消息和历史。如果有需要，标签对象的消息可以采用 GPG 加密签名。</p>
 <p>创建两种类型的标签其实很容易（只是一个命令行选项的差异）</p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="keyword">tag</span> <span class="keyword">to</span>-<span class="keyword">be</span>-tested</span><br><span class="line">$ git <span class="keyword">tag</span> -<span class="keyword">a</span> v1.<span class="number">1.0</span> # Prompts <span class="keyword">for</span> <span class="keyword">a</span> <span class="keyword">tag</span> message</span><br></pre></td></tr></table></figure>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git <span class="keyword">tag</span> <span class="title">to-be-tested</span></div><div class="line">$ git <span class="keyword">tag</span> <span class="title">-a</span> v1.<span class="number">1.0</span> <span class="comment"># Prompts for a tag message</span></div></pre></td></tr></table></figure>
 <p><strong>7. 创建分支</strong></p>
 <p>在 Git 中创建分支非常容易（闪电般的速度，因为它仅仅需要创建一个不到100字节的文件）。创建一个新分支并切换过去的通用写法是：</p>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>git branch feature132</span><br><span class="line"><span class="variable">$ </span>git checkout feature132</span><br></pre></td></tr></table></figure>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$ </span>git branch feature132</div><div class="line"><span class="variable">$ </span>git checkout feature132</div></pre></td></tr></table></figure>
 <p>当然，如果你知道你要马上切换过去，你可以使用一条命令就能做到：</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout -<span class="tag">b</span> feature132</span><br></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git checkout -<span class="selector-tag">b</span> feature132</div></pre></td></tr></table></figure>
 <p>如果你要重命名一个本地分支，同样是件容易的事（长命令方式用来显示具体执行过程）：</p>
-<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout -<span class="keyword">b </span>twitter-experiment feature132</span><br><span class="line">$ git <span class="keyword">branch </span>-d feature132</span><br></pre></td></tr></table></figure>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git checkout -<span class="keyword">b </span>twitter-experiment feature132</div><div class="line">$ git <span class="keyword">branch </span>-d feature132</div></pre></td></tr></table></figure>
 <p>更新：或者你（就像 Brian Palmer 在博客文章评论中指出的那样）只使用 “git branch” 和 -m 选项就可以一步到位：</p>
-<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="keyword">branch </span>-m twitter-experiment</span><br><span class="line">$ git <span class="keyword">branch </span>-m feature132 twitter-experiment</span><br></pre></td></tr></table></figure>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git <span class="keyword">branch </span>-m twitter-experiment</div><div class="line">$ git <span class="keyword">branch </span>-m feature132 twitter-experiment</div></pre></td></tr></table></figure>
 <p><strong>8. 合并分支</strong></p>
 <p>在将来某个时候，你想要合并你的变更。有两种方式可以实现：</p>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>git checkout master</span><br><span class="line"><span class="variable">$ </span>git merge feature83 <span class="comment"># Or...</span></span><br><span class="line"><span class="variable">$ </span>git rebase feature83</span><br></pre></td></tr></table></figure>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ git checkout <span class="keyword">master</span></div><div class="line"><span class="title">$</span> git merge feature83 <span class="comment"># Or...</span></div><div class="line">$ git rebase feature83</div></pre></td></tr></table></figure>
 <p>merge 和 rebase 的区别在于，merge 试图解决变更而且创建一个融合后的新提交，而 rebase 则试图把自你上次在其他分支上的变化，在另一个分支的 HAED 上重现。但是，在你向远程服务器推送一个分支之后，不要进行 rebase 操作 - 这会引发混淆/问题。</p>
 <p>如果你不能确定哪些分支仍然有独立的工作在进行 - 以便你能知道你需要合并哪一个分支以及删除哪些分支，git branch 命令有两个选项可以帮助实现这一点：</p>
-<figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Shows branches that are <span class="keyword">all</span> merged <span class="keyword">in</span> <span class="keyword">to</span> your current branch</span><br><span class="line">$ git branch <span class="comment">--merged</span></span><br><span class="line"></span><br><span class="line"># Shows branches that are <span class="keyword">not</span> merged <span class="keyword">in</span> <span class="keyword">to</span> your current branch</span><br><span class="line">$ git branch <span class="comment">--no-merged</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Shows branches that are all merged in to your current branch</span></div><div class="line">$ git branch <span class="comment">--merged</span></div><div class="line"></div><div class="line"><span class="comment"># Shows branches that are not merged in to your current branch</span></div><div class="line">$ git branch <span class="comment">--no-merged</span></div></pre></td></tr></table></figure>
 <p><strong>9. 远程分支</strong></p>
 <p>如果你有一个本地分支，你想让它出现在远程服务器上，你可以使用一个推送命令：</p>
-<figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git push origin twitter-experiment:refs/heads/twitter-experiment</span><br><span class="line"># <span class="keyword">Where</span> origin <span class="keyword">is</span> our server name <span class="keyword">and</span> twitter-experiment <span class="keyword">is</span> the branch</span><br></pre></td></tr></table></figure>
+<figure class="highlight maxima"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">push</span> <span class="built_in">origin</span> twitter-experiment:refs/heads/twitter-experiment</div><div class="line"># Where <span class="built_in">origin</span> <span class="built_in">is</span> our server name <span class="keyword">and</span> twitter-experiment <span class="built_in">is</span> the branch</div></pre></td></tr></table></figure>
 <p>更新：感谢 Erlend 在博客文章评论中提到的 - 这实际上和 git push origin twitter-experiment 达到的效果的一样，但是通过使用全部语法，你能看到你实际上在两端使用了不同的名字（你的本地名字可能是 add-ssl-support，而远程名字可能是 issue-1723）。</p>
 <p>如果你想删除一个远程服务器上的分支（请注意分支名称之前的冒号）：</p>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>git push origin <span class="symbol">:twitter-experiment</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$ </span>git push origin <span class="symbol">:twitter-experiment</span></div></pre></td></tr></table></figure>
 <p>如果你想显示所有远程分支的状态，你能像这样查看它们：</p>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>git remote show origin</span><br></pre></td></tr></table></figure>
+<figure class="highlight maxima"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git remote <span class="built_in">show</span> <span class="built_in">origin</span></div></pre></td></tr></table></figure>
 <p>这可能会列出一些服务器上曾经有过但现在已不存在的分支。如果碰到这种情况，你可以很轻松地使用如下命令从本地检出并将其删除：</p>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>git remote prune</span><br></pre></td></tr></table></figure>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$ </span>git remote prune</div></pre></td></tr></table></figure>
 <p>最后，如果你有一个远程分支，你想在本地进行跟踪它，通常的做法是：</p>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>git branch --track myfeature origin/myfeature</span><br><span class="line"><span class="variable">$ </span>git checkout myfeature</span><br></pre></td></tr></table></figure>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$ </span>git branch --track myfeature origin/myfeature</div><div class="line"><span class="variable">$ </span>git checkout myfeature</div></pre></td></tr></table></figure>
 <p>然而，如果你使用 -b 标识符去检出的话，新版的 Git 会自动建立跟踪：</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout -<span class="tag">b</span> myfeature origin/myfeature</span><br></pre></td></tr></table></figure>
-<h1 id="在临时存放区、索引和文件系统中保存内容">在临时存放区、索引和文件系统中保存内容</h1><p><strong>10. 临时存放（Stashing）</strong></p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git checkout -<span class="selector-tag">b</span> myfeature origin/myfeature</div></pre></td></tr></table></figure>
+<h1 id="在临时存放区、索引和文件系统中保存内容"><a href="#在临时存放区、索引和文件系统中保存内容" class="headerlink" title="在临时存放区、索引和文件系统中保存内容"></a>在临时存放区、索引和文件系统中保存内容</h1><p><strong>10. 临时存放（Stashing）</strong></p>
 <p>在Git中，你可以把当前的工作状态储存在一个临时的存储区域堆栈，然后重新加以利用。简单的案例如下：</p>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>git stash <span class="comment"># Do something...</span></span><br><span class="line"><span class="variable">$ </span>git stash pop</span><br></pre></td></tr></table></figure>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$ </span>git stash <span class="comment"># Do something...</span></div><div class="line"><span class="variable">$ </span>git stash pop</div></pre></td></tr></table></figure>
 <p>很多人推荐使用 git stash apply 来代替 “pop”，然而如果你真这么做的话，你最终得到一个长长的毫无用处的储藏清单。如果对它进行清理，“pop” 只会把它从堆栈中删除。如果你已经使用了 git stash apply ，你可以使用如下命令从堆栈中删除最后一项：</p>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>git stash drop</span><br></pre></td></tr></table></figure>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$ </span>git stash drop</div></pre></td></tr></table></figure>
 <p>Git 会基于当前的提交消息自动创建一个注释信息。如果你更喜欢使用一个自定义的消息（因为它可能和之前的提交无关）：</p>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>git stash save <span class="string">"My stash message"</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$ </span>git stash save <span class="string">"My stash message"</span></div></pre></td></tr></table></figure>
 <p>如果你想从你的列表中（不必是最后一个）对一个特定的 stash 加以利用，你可以列出它们并像这样来使用它：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git stash list</span><br><span class="line">  stash@&#123;<span class="operator">0&#125;: <span class="keyword">On</span> <span class="keyword">master</span>: <span class="keyword">Changed</span> <span class="keyword">to</span> German</span><br><span class="line">  stash@&#123;<span class="number">1</span>&#125;: <span class="keyword">On</span> <span class="keyword">master</span>: <span class="keyword">Language</span> <span class="keyword">is</span> <span class="keyword">now</span> Italian</span><br><span class="line">$ git stash <span class="keyword">apply</span> stash@&#123;<span class="number">1</span>&#125;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight mathematica"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ git stash list</div><div class="line">  stash@&#123;0&#125;: <span class="keyword">On</span> master: Changed to German</div><div class="line">  stash@&#123;1&#125;: <span class="keyword">On</span> master: <span class="keyword">Language</span> is now Italian</div><div class="line">$ git stash apply stash@&#123;1&#125;</div></pre></td></tr></table></figure>
 <p><strong>11. 交互式添加</strong></p>
 <p>在 Subversion 的世界里，你修改文件然后只是提交有变化的文件。而在 Git 的世界里，你在提交某些文件甚至某些补丁上有更多的控制权。为了提交某些文件或者文件的某些部分，你必须进入交互模式。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ git add -i</span><br><span class="line">           staged     unstaged path</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">*** Commands ***</span><br><span class="line">  <span class="number">1</span>: status      <span class="number">2</span>: update   <span class="number">3</span>: revert   <span class="number">4</span>: add untracked</span><br><span class="line">  <span class="number">5</span>: patch      <span class="number">6</span>: diff     <span class="number">7</span>: quit     <span class="number">8</span>: help</span><br><span class="line">What now&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">add</span> -i</div><div class="line">           staged     unstaged path</div><div class="line"></div><div class="line"></div><div class="line">*** Commands ***</div><div class="line">  <span class="number">1</span>: status      <span class="number">2</span>: <span class="keyword">update</span>   <span class="number">3</span>: revert   <span class="number">4</span>: <span class="built_in">add</span> untracked</div><div class="line">  <span class="number">5</span>: patch      <span class="number">6</span>: diff     <span class="number">7</span>: <span class="keyword">quit</span>     <span class="number">8</span>: <span class="keyword">help</span></div><div class="line">What now&gt;</div></pre></td></tr></table></figure>
 <p>这会让你进入一个基于交互式命令的菜单模式。你可以使用命令的数字符号或者加亮字符（如果你开启颜色高亮显示功能的话）进入对应模式，然后就是正常输入文件数的问题了（你可以使用像1或1-4或2,4,7这样的格式）。</p>
 <p>如果你想进入修补模式（交互模式下输入‘p’或‘5’ ），你也可以直接进入那个模式：</p>
-<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$ git add -p    </span><br><span class="line">diff --git a/dummy.rb b/dummy.rb  </span><br><span class="line">index 4a00477..f856fb0 100644  </span><br><span class="line"><span class="header">--- a/dummy.rb</span></span><br><span class="line"><span class="header">+++ b/dummy.rb</span></span><br><span class="line"><span class="chunk">@@ -1,5 +1,5 @@</span></span><br><span class="line"> class MyFoo</span><br><span class="line">   def say</span><br><span class="line"><span class="deletion">-    puts "Annyong Haseyo"</span></span><br><span class="line"><span class="addition">+    puts "Guten Tag"</span></span><br><span class="line">   end</span><br><span class="line"> end</span><br><span class="line">Stage this hunk [y,n,q,a,d,/,e,?]?</span><br></pre></td></tr></table></figure>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">$ git add -p    </div><div class="line">diff --git a/dummy.rb b/dummy.rb  </div><div class="line">index 4a00477..f856fb0 100644  </div><div class="line"><span class="comment">--- a/dummy.rb</span></div><div class="line"><span class="comment">+++ b/dummy.rb</span></div><div class="line"><span class="meta">@@ -1,5 +1,5 @@</span></div><div class="line"> class MyFoo</div><div class="line">   def say</div><div class="line"><span class="deletion">-    puts "Annyong Haseyo"</span></div><div class="line"><span class="addition">+    puts "Guten Tag"</span></div><div class="line">   end</div><div class="line"> end</div><div class="line">Stage this hunk [y,n,q,a,d,/,e,?]?</div></pre></td></tr></table></figure>
 <p>如你所见，在底部你得到一系列选项为选择去添加文件改变的部分，这个文件的所有变化等等。使用‘?’ 命令可以了解选不同选项的解释。</p>
 <p><strong>12. 存储/从文件系统检索</strong></p>
 <p>一些项目（例如 Git 项目自身）直接在 Git 文件系统中存储额外的文件而不必是检入文件。</p>
 <p>让我们开始在 Git 中存储一个任意文件：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">echo</span> <span class="string">"Foo"</span> | git <span class="built_in">hash</span>-object -w --stdin</span><br><span class="line"><span class="number">51</span><span class="built_in">fc</span>03a9bb365fae74fd2bf66517b30bf48020cb</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">echo</span> <span class="string">"Foo"</span> | git <span class="built_in">hash</span>-object -w --stdin</div><div class="line">51<span class="built_in">fc</span>03a9bb365fae74fd2bf66517b30bf48020cb</div></pre></td></tr></table></figure>
 <p>此时，该文件对象已在数据库中，但是如果你不设置（一些东西）指向那个文件对象，它将被作为垃圾而回收。最简单的方法是标记它：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git tag myfile <span class="number">51</span><span class="built_in">fc</span>03a9bb365fae74fd2bf66517b30bf48020cb</span><br></pre></td></tr></table></figure>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="keyword">tag</span> <span class="title">myfile</span> <span class="number">51</span>fc03a9bb365fae74fd2bf66517b30bf48020cb</div></pre></td></tr></table></figure>
 <p>既然在这里我们已经标记了 myfile。当我们需要获取该文件时，我们可以这样做：</p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="keyword">cat</span>-<span class="keyword">file</span> blob myfile</span><br></pre></td></tr></table></figure>
+<figure class="highlight gams"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">$</span> git cat-<span class="keyword">file</span> blob myfile</div></pre></td></tr></table></figure>
 <p>程序员可能经常用到的工具文件（密码、GPG 密钥、等等），不需要每次都检出到磁盘上（特别是在生产环境下），这种方法非常有效。</p>
-<h1 id="日志记录">日志记录</h1><p><strong>13. 查看日志</strong></p>
+<h1 id="日志记录"><a href="#日志记录" class="headerlink" title="日志记录"></a>日志记录</h1><p><strong>13. 查看日志</strong></p>
 <p>如果你不使用‘git log’查看最近提交历史的话，你就不能长时间顺利地使用 Git。但是，也存在一些如何更好使用它的建议。例如，你可以查看每次提交中改变的一个补丁：</p>
-<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="command">log</span> -p</span><br></pre></td></tr></table></figure>
+<figure class="highlight gams"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">$</span> git <span class="built-in">log</span> -p</div></pre></td></tr></table></figure>
 <p>或者你可以只是查看一个哪些文件有所更改的概述：</p>
-<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="command">log</span> <span class="comment">--stat</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">log</span> <span class="comment">--stat</span></div></pre></td></tr></table></figure>
 <p>你可以在一行中设置一个不错的别名，用于显示简短的提交和漂亮的带有消息的分支图（像 gitk，但在命令行上）：</p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git config --<span class="keyword">global</span> alias.<span class="keyword">lol</span> <span class="string">"log --pretty=oneline --abbrev-commit --graph --decorate"</span></span><br><span class="line">$ git <span class="keyword">lol</span></span><br><span class="line">* <span class="number">4</span>d2409a (master) Oops, meant that <span class="keyword">to</span> <span class="keyword">be</span> in Korean</span><br><span class="line">* <span class="number">169</span>b845 Hello world</span><br></pre></td></tr></table></figure>
+<figure class="highlight maxima"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ git config --global <span class="built_in">alias</span>.lol <span class="string">"log --pretty=oneline --abbrev-commit --graph --decorate"</span></div><div class="line">$ git lol</div><div class="line">* 4d2409a (master) Oops, meant that to be <span class="keyword">in</span> Korean</div><div class="line">* <span class="number">169b845</span> Hello world</div></pre></td></tr></table></figure>
 <p><strong>14. 检索日志</strong></p>
 <p>如果你想在日志中查询一个特定作者，你可以这样指定：</p>
-<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="command">log</span> <span class="comment">--author=Andy</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">log</span> <span class="comment">--author=Andy</span></div></pre></td></tr></table></figure>
 <p>更新：感谢 Johannes 的评论，我终于化解了一部分困惑。</p>
 <p>或者如果你有一个搜索词出现在提交消息中：</p>
-<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="command">log</span> <span class="comment">--grep="Something in the message"</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">log</span> <span class="comment">--grep="Something in the message"</span></div></pre></td></tr></table></figure>
 <p>还有一个功能更强大的叫 pickaxe 的命令，它可以查找条目用来添加或删除一个特定的内容（也就是，当它第一次出现或被删除的时候）。这样你就可以知道何时增加了一行（但是如果那一行中的字符随后被改变，你将无从得知）：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git log -S "TODO: <span class="operator"><span class="keyword">Check</span> <span class="keyword">for</span> <span class="keyword">admin</span> <span class="keyword">status</span><span class="string">"</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git log -S "TODO: <span class="keyword">Check</span> <span class="keyword">for</span> <span class="keyword">admin</span> <span class="keyword">status</span><span class="string">"</span></div></pre></td></tr></table></figure>
 <p>如果你改变一个特定的文件会怎么样呢，例如 lib/foo.rb</p>
-<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="command">log</span> lib/foo.rb</span><br></pre></td></tr></table></figure>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git log <span class="class"><span class="keyword">lib</span>/<span class="title">foo</span>.<span class="title">rb</span></span></div></pre></td></tr></table></figure>
 <p>比如说你有一个 feature/132 分支和一个 feature/145 分支，你想查看在这些分支但却不在主分支上的提交（备注：^ 代表非）：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">log</span> feature/<span class="number">132</span> feature/<span class="number">145</span> ^master</span><br></pre></td></tr></table></figure>
+<figure class="highlight maxima"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">log</span> <span class="built_in">feature</span>/<span class="number">132</span> <span class="built_in">feature</span>/<span class="number">145</span> ^master</div></pre></td></tr></table></figure>
 <p>你也可以使用 ActiveSupport 风格的日期缩小日期范围：</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git log --since=<span class="number">2</span><span class="class">.months</span><span class="class">.ago</span> --until=<span class="number">1</span><span class="class">.day</span><span class="class">.ago</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git log --since=<span class="number">2</span><span class="selector-class">.months</span><span class="selector-class">.ago</span> --until=<span class="number">1</span><span class="selector-class">.day</span><span class="selector-class">.ago</span></div></pre></td></tr></table></figure>
 <p>它默认使用 OR 模式来组合查询，但是你也可以很轻松地改为 AND 模式（如果你的查询项不止一个的话）</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git log --since=<span class="number">2</span><span class="class">.months</span><span class="class">.ago</span> --until=<span class="number">1</span><span class="class">.day</span><span class="class">.ago</span> --author=andy -S <span class="string">"something"</span> --all-match</span><br></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git log --since=<span class="number">2</span><span class="selector-class">.months</span><span class="selector-class">.ago</span> --until=<span class="number">1</span><span class="selector-class">.day</span><span class="selector-class">.ago</span> --author=andy -S <span class="string">"something"</span> --all-match</div></pre></td></tr></table></figure>
 <p><strong>15. 选择查看/修改的版本</strong></p>
 <p>当引用一个修订版本时，你有许多选项可以选择，当然，这取决于你对此功能的了解程度：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="operator"><span class="keyword">show</span> <span class="number">12</span>a86bc38 # <span class="keyword">By</span> revision</span><br><span class="line">$ git <span class="keyword">show</span> v1<span class="number">.0</span><span class="number">.1</span> # <span class="keyword">By</span> tag</span><br><span class="line">$ git <span class="keyword">show</span> feature132 # <span class="keyword">By</span> branch <span class="keyword">name</span></span><br><span class="line">$ git <span class="keyword">show</span> <span class="number">12</span>a86bc38^ # <span class="keyword">Parent</span> <span class="keyword">of</span> a <span class="keyword">commit</span></span><br><span class="line">$ git <span class="keyword">show</span> <span class="number">12</span>a86bc38~<span class="number">2</span> # Grandparent <span class="keyword">of</span> a <span class="keyword">commit</span></span><br><span class="line">$ git <span class="keyword">show</span> feature132@&#123;yesterday&#125; # <span class="keyword">Time</span> <span class="keyword">relative</span></span><br><span class="line">$ git <span class="keyword">show</span> feature132@&#123;<span class="number">2.</span>hours.ago&#125; # <span class="keyword">Time</span> <span class="keyword">relative</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$ git <span class="keyword">show</span> <span class="number">12</span>a86bc38 # <span class="keyword">By</span> revision</div><div class="line">$ git <span class="keyword">show</span> v1<span class="number">.0</span><span class="number">.1</span> # <span class="keyword">By</span> tag</div><div class="line">$ git <span class="keyword">show</span> feature132 # <span class="keyword">By</span> branch <span class="keyword">name</span></div><div class="line">$ git <span class="keyword">show</span> <span class="number">12</span>a86bc38^ # <span class="keyword">Parent</span> <span class="keyword">of</span> a <span class="keyword">commit</span></div><div class="line">$ git <span class="keyword">show</span> <span class="number">12</span>a86bc38~<span class="number">2</span> # Grandparent <span class="keyword">of</span> a <span class="keyword">commit</span></div><div class="line">$ git <span class="keyword">show</span> feature132@&#123;yesterday&#125; # <span class="keyword">Time</span> <span class="keyword">relative</span></div><div class="line">$ git <span class="keyword">show</span> feature132@&#123;<span class="number">2.</span>hours.ago&#125; # <span class="keyword">Time</span> <span class="keyword">relative</span></div></pre></td></tr></table></figure>
 <p>请注意，和上一节有所不同，在行尾的脱字符表示提交的 parent - 行首的脱字符则表示不在这个分支上。</p>
 <p><strong>16. 选择一个范围</strong></p>
 <p>最简单的方法是这样来用：</p>
-<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">log</span> origin/master..<span class="built_in">new</span></span><br><span class="line"><span class="comment"># [old]..[new] - everything you haven't pushed yet</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">log</span> origin/master..<span class="built_in">new</span></div><div class="line"><span class="comment"># [old]..[new] - everything you haven't pushed yet</span></div></pre></td></tr></table></figure>
 <p>你也可以删除 [new]，这将使用当前的 HEAD。</p>
-<h1 id="时间回退和错误修复">时间回退和错误修复</h1><p><strong>17. 重置更改</strong></p>
+<h1 id="时间回退和错误修复"><a href="#时间回退和错误修复" class="headerlink" title="时间回退和错误修复"></a>时间回退和错误修复</h1><p><strong>17. 重置更改</strong></p>
 <p>如果你还没有提交一个更改，你可以很容易地重置它：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="operator"><span class="keyword">reset</span> <span class="keyword">HEAD</span> lib/foo.rb</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git reset HEAD <span class="class"><span class="keyword">lib</span>/<span class="title">foo</span>.<span class="title">rb</span></span></div></pre></td></tr></table></figure>
 <p>通常使用‘unstage’作为别名比较好，因为它不是那么显而易见。</p>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>git config --global <span class="keyword">alias</span>.unstage <span class="string">"reset HEAD"</span></span><br><span class="line"><span class="variable">$ </span>git unstage lib/foo.rb</span><br></pre></td></tr></table></figure>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git config --global <span class="keyword">alias</span>.unstage <span class="string">"reset HEAD"</span></div><div class="line">$ git unstage <span class="class"><span class="keyword">lib</span>/<span class="title">foo</span>.<span class="title">rb</span></span></div></pre></td></tr></table></figure>
 <p>如果你已经提交了文件，你可以做两件事情 - 如果是最后一次提交，你可以这样来修改：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="operator"><span class="keyword">commit</span> <span class="comment">--amend</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="keyword">commit</span> <span class="comment">--amend</span></div></pre></td></tr></table></figure>
 <p>这将回滚到最后一次提交，让你的工作副本回到变化存储在暂存区的状态，你可以编辑提交消息准备下一次提交。</p>
 <p>如果你的提交不止一次，并且只想完全回滚它们，你可以重置分支回到之前的时间点。</p>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>git checkout feature132</span><br><span class="line"><span class="variable">$ </span>git reset --hard <span class="constant">HEAD~</span><span class="number">2</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$ </span>git checkout feature132</div><div class="line"><span class="variable">$ </span>git reset --hard HEAD~<span class="number">2</span></div></pre></td></tr></table></figure>
 <p>如果你真的想把分支指向一个完全不同的 SHA-1（也许你把一个分支的 HEAD 指向另一个分支，或者进一步提交），你可以按照以下方式去做：</p>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>git checkout <span class="constant">FOO</span></span><br><span class="line"><span class="variable">$ </span>git reset --hard <span class="constant">SHA</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$ </span>git checkout FOO</div><div class="line"><span class="variable">$ </span>git reset --hard SHA</div></pre></td></tr></table></figure>
 <p>实际上还有一种更便捷的方式（因为它不会先将你的工作副本变回最初 FOO 状态，然后再指向 SHA）：</p>
-<figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git update-<span class="keyword">ref</span> refs/heads/<span class="type">FOO</span> <span class="type">SHA</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="keyword">update</span>-<span class="keyword">ref</span> refs/heads/FOO <span class="keyword">SHA</span></div></pre></td></tr></table></figure>
 <p><strong>18. 提交到错误的分支</strong></p>
 <p>好吧，让我们假设你提交到主分支，但应该已经创建了一个叫做 experimental 的主题分支。为了移除这些变化，你可以在当前点创建一个分支，回退 HEAD，然后检出新的分支：</p>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>git branch experimental   <span class="comment"># Creates a pointer to the current master state</span></span><br><span class="line"><span class="variable">$ </span>git reset --hard master~<span class="number">3</span> <span class="comment"># Moves the master branch pointer back to 3 revisions ago</span></span><br><span class="line"><span class="variable">$ </span>git checkout experimental</span><br></pre></td></tr></table></figure>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$ </span>git branch experimental   <span class="comment"># Creates a pointer to the current master state</span></div><div class="line"><span class="variable">$ </span>git reset --hard master~<span class="number">3</span> <span class="comment"># Moves the master branch pointer back to 3 revisions ago</span></div><div class="line"><span class="variable">$ </span>git checkout experimental</div></pre></td></tr></table></figure>
 <p>如果你已经在一个分支的一个分支的一个分支等上面做了些变更，这将会更复杂。然后你需要做的就是在这个分支上将其变更 rebase 到另一个的地方：</p>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>git branch newtopic <span class="constant">STARTPOINT</span></span><br><span class="line"><span class="variable">$ </span>git rebase oldtopic --onto newtopic</span><br></pre></td></tr></table></figure>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$ </span>git branch newtopic STARTPOINT</div><div class="line"><span class="variable">$ </span>git rebase oldtopic --onto newtopic</div></pre></td></tr></table></figure>
 <p><strong>19. 交互式 rebasing</strong></p>
 <p>这是一个很酷的特性，我之前已看过演示，但当时没有真正搞明白，现在来看其实很简单。比方说，你已做了3次提交，但是你想对它们进行重新排序或者编辑（或者合并它们）：</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git rebase -<span class="tag">i</span> master~<span class="number">3</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git rebase -<span class="selector-tag">i</span> master~<span class="number">3</span></div></pre></td></tr></table></figure>
 <p>然后你将编辑器打开。你所要做的就是修改 “pick/squash/edit 的指令来进行如何提交，然后保存/退出。在编辑之后，你可以使用 git rebase —continue 让你的每一个指令一个一个进行。</p>
 <p>如果你选择编辑一个文件，这会让你停留在你提交时的状态，因此你需要使用 git commit —amend 对它进行编辑。</p>
 <p>备注：在 REBASE 过程中不要进行提交工作 - 只能添加然后使用 —continue, —skip or —abort 选项。</p>
 <p><strong>20. 清理</strong></p>
 <p>如果你已经提交了一些内容到你的分支中（也许你是从SVN中的旧代码库导入的），你想从历史中删除掉所有的已提交内容：</p>
-<figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="keyword">filter</span>-branch --tree-<span class="keyword">filter</span> <span class="string">'rm -f *.class'</span> HEAD</span><br></pre></td></tr></table></figure>
+<figure class="highlight mel"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="keyword">filter</span>-branch --tree-<span class="keyword">filter</span> <span class="string">'rm -f *.class'</span> HEAD</div></pre></td></tr></table></figure>
 <p>如果你已经向远程服务器推送过代码，但自那之后提交的都是一些垃圾，在推送之前你可以在本地系统上执行这样的操作：</p>
-<figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="keyword">filter</span>-branch --tree-<span class="keyword">filter</span> <span class="string">'rm -f *.class'</span> origin/master..HEAD</span><br></pre></td></tr></table></figure>
-<h1 id="各种各样的提示">各种各样的提示</h1><p><strong>21. 之前你看过的引用</strong></p>
+<figure class="highlight mel"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="keyword">filter</span>-branch --tree-<span class="keyword">filter</span> <span class="string">'rm -f *.class'</span> origin/master..HEAD</div></pre></td></tr></table></figure>
+<h1 id="各种各样的提示"><a href="#各种各样的提示" class="headerlink" title="各种各样的提示"></a>各种各样的提示</h1><p><strong>21. 之前你看过的引用</strong></p>
 <p>如果你知道你之前已经查看过一个 SHA-1，但是你已经做了一些重置/回退工作，你可以使用 reflog 命令去查看你最近看过的 SHA-1：</p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git reflog</span><br><span class="line">$ git <span class="keyword">log</span> -<span class="keyword">g</span> # Same <span class="keyword">as</span> above, but shows <span class="keyword">in</span> '<span class="keyword">log</span>' <span class="keyword">format</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git reflog</div><div class="line">$ git <span class="keyword">log</span> -<span class="keyword">g</span> # Same <span class="keyword">as</span> above, but shows <span class="keyword">in</span> '<span class="keyword">log</span>' <span class="keyword">format</span></div></pre></td></tr></table></figure>
 <p><strong>22. 分支命名</strong></p>
 <p>一个可爱的小提示 - 请记住，分支的名字并不局限于 a-z 和 0-9 这些字符。名字中可以使用 / 和 . 来伪装命名空间或者版本号，例如：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="preprocessor"># Generate a changelog of Release <span class="number">132</span></span></span><br><span class="line">$ git shortlog release/<span class="number">132</span> ^release/<span class="number">131</span></span><br><span class="line">$ <span class="preprocessor"># Tag this as v1<span class="number">.0</span><span class="number">.1</span></span></span><br><span class="line">$ git tag v1<span class="number">.0</span><span class="number">.1</span> release/<span class="number">132</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ # Generate a changelog of Release <span class="number">132</span></div><div class="line">$ git shortlog release/<span class="number">132</span> ^release/<span class="number">131</span></div><div class="line">$ # Tag this as v1<span class="number">.0</span><span class="number">.1</span></div><div class="line">$ git tag v1<span class="number">.0</span><span class="number">.1</span> release/<span class="number">132</span></div></pre></td></tr></table></figure>
 <p><strong>23. 寻找谁是始作俑者</strong></p>
 <p>寻找谁更改了一个文件中的一行代码经常会用到。简单命令如下：</p>
-<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="keyword">blame </span>FILE</span><br></pre></td></tr></table></figure>
+<figure class="highlight gams"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">$</span> git blame <span class="keyword">FILE</span></div></pre></td></tr></table></figure>
 <p>有时更改来自于前一个文件（如果你已经合并了两个文件，或者你已经移动了一个函数），因此你可以这样用：</p>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span><span class="comment"># shows which file names the content came from</span></span><br><span class="line"><span class="variable">$ </span>git blame -<span class="constant">C FILE</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$ </span><span class="comment"># shows which file names the content came from</span></div><div class="line"><span class="variable">$ </span>git blame -C FILE</div></pre></td></tr></table></figure>
 <p>有时通过向前或向后点击来进行变化跟踪，这是很好的方法。有一个内置的 GUI 程序专门为此设计：</p>
-<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git gui <span class="keyword">blame </span>FILE</span><br></pre></td></tr></table></figure>
+<figure class="highlight gams"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">$</span> git gui blame <span class="keyword">FILE</span></div></pre></td></tr></table></figure>
 <p><strong>24. 数据库维护</strong></p>
 <p>Git 通常不需要大量维护，它基本上可以自我维护。然而，你可以使用如下命令查看数据库统计信息：</p>
-<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="command">count</span>-objects -v</span><br></pre></td></tr></table></figure>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">count</span>-objects -v</div></pre></td></tr></table></figure>
 <p>如果数值很高，你可以选择使用垃圾回收你的重复内容。这不会影响推送或者其它用户，但却可以让你的命令运行更快且占用更少空间：</p>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>git gc</span><br></pre></td></tr></table></figure>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$ </span>git gc</div></pre></td></tr></table></figure>
 <p>经常运行一致性检查也是值得推荐的做法：</p>
-<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git fsck <span class="comment">--full</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight ada"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git fsck <span class="comment">--full</span></div></pre></td></tr></table></figure>
 <p>你也可以在行尾添加一个 —auto 参数（如果你频繁运行它，或者在你的服务器上每日从 crontab 中运行它），如果统计数据表明必须进行要进行一致性检查，只要 fsck 命令就行。</p>
 <p>如果检查 “dangling” 或 “unreachable” 的结果一切正常，这经常是由于回退 HEAD 或 rebasing的结果。如果检查“missing” 或 “sha1 mismatch” 出了问题…寻求专业帮助吧！</p>
 <p><strong>25. 恢复一个丢失的分支</strong></p>
 <p>如果你使用 -D 选项删除了一个分支 experimental，你可以重新创建它：</p>
-<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="keyword">branch </span>experimental SHA1_OF_HASH</span><br></pre></td></tr></table></figure>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="keyword">branch </span>experimental SHA1_OF_HASH</div></pre></td></tr></table></figure>
 <p>你可以使用 git reflog 来发现一个 SHA-1 哈希值，如果你近期访问过它的话。</p>
 <p>另一种方法是使用 git fsck —lost-found。一个悬空的提交就是一个 lost HEAD（它只会是一个已删除分支的 HEAD，因为当一个 HEAD^ 被 HEAD 引用时，它就没有悬空）</p>
 <hr>
@@ -393,17 +394,17 @@
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://rocxing.github.io/blog/public/2015/08/26/Git中级用户的25个提示/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://rocxing.github.io/blog/public/blog/public/2015/08/26/Git中级用户的25个提示/">
                 <i class="fa fa-google-plus"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://rocxing.github.io/blog/public/2015/08/26/Git中级用户的25个提示/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://rocxing.github.io/blog/public/blog/public/2015/08/26/Git中级用户的25个提示/">
                 <i class="fa fa-facebook-official"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://rocxing.github.io/blog/public/2015/08/26/Git中级用户的25个提示/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://rocxing.github.io/blog/public/blog/public/2015/08/26/Git中级用户的25个提示/">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
@@ -431,7 +432,7 @@
 
                 <footer id="footer" class="main-content-wrap">
     <span class="copyrights">
-        Copyrights &copy; 2015 RocXing. All Rights Reserved.
+        Copyrights &copy; 2016 RocXing. All Rights Reserved.
     </span>
 </footer>
 
@@ -466,17 +467,17 @@
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://rocxing.github.io/blog/public/2015/08/26/Git中级用户的25个提示/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://rocxing.github.io/blog/public/blog/public/2015/08/26/Git中级用户的25个提示/">
                 <i class="fa fa-google-plus"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://rocxing.github.io/blog/public/2015/08/26/Git中级用户的25个提示/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://rocxing.github.io/blog/public/blog/public/2015/08/26/Git中级用户的25个提示/">
                 <i class="fa fa-facebook-official"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://rocxing.github.io/blog/public/2015/08/26/Git中级用户的25个提示/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://rocxing.github.io/blog/public/blog/public/2015/08/26/Git中级用户的25个提示/">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
@@ -500,17 +501,17 @@
                 <div id="share-options-bar" class="share-options-bar" data-behavior="1">
     <ul class="share-options">
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://rocxing.github.io/blog/public/2015/08/26/Git中级用户的25个提示/">
+            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://rocxing.github.io/blog/public/blog/public/2015/08/26/Git中级用户的25个提示/">
                 <i class="fa fa-google-plus"></i><span class="">Share on Google Plus</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://rocxing.github.io/blog/public/2015/08/26/Git中级用户的25个提示/">
+            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://rocxing.github.io/blog/public/blog/public/2015/08/26/Git中级用户的25个提示/">
                 <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://rocxing.github.io/blog/public/2015/08/26/Git中级用户的25个提示/">
+            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://rocxing.github.io/blog/public/blog/public/2015/08/26/Git中级用户的25个提示/">
                 <i class="fa fa-twitter"></i><span>Share on Twitter</span>
             </a>
         </li>
@@ -552,7 +553,7 @@
         <div id="cover" style="background-image:url('/blog/public/assets/images/cover.jpg');"></div>
     </body>
     <!--SCRIPTS-->
-<script src="/blog/public/assets/js/script.min.js" type="text/javascript"></script>
+<script src="/blog/public/assets/js/script.min.js"></script>
 <!--SCRIPTS END-->
 
 

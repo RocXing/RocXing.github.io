@@ -30,7 +30,7 @@ UTF-8的编码规则很简单，只有二条：
 
 对于单字节的符号，字节的第一位设为0，后面7位为这个符号的unicode码。因此对于英语字母，UTF-8编码和ASCII码是相同的。
 对于n字节的符号（n&amp;gt;1），第一个字">
-<meta property="og:updated_time" content="2015-11-04T07:39:26.721Z">
+<meta property="og:updated_time" content="2016-06-28T07:05:03.059Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="编码和Endian">
 <meta name="twitter:description" content="UTF-8编码
@@ -49,7 +49,7 @@ UTF-8的编码规则很简单，只有二条：
     
     
     <!--STYLES-->
-    <link rel="stylesheet" href="/blog/public/assets/css/style.min.css" type="text/css">
+    <link rel="stylesheet" href="/blog/public/assets/css/style.min.css">
     <!--STYLES END-->
     
 </head>
@@ -62,7 +62,7 @@ UTF-8的编码规则很简单，只有二条：
         <a class="header-title-link" href="/blog/public/ ">RocXing&#39; BLOG</a>
     </h1>
     
-        <a class="header-right-picture" href="/#about">
+        <a class="header-right-picture" href="/blog/public/#about">
             <img class="header-picture" src="/blog/public/assets/images/dog.jpg"/>
         </a>
     
@@ -70,7 +70,7 @@ UTF-8的编码规则很简单，只有二条：
             <nav id="sidebar" data-behavior="1">
     
     <div class="sidebar-profile">
-        <a href="/#about">
+        <a href="/blog/public/#about">
             
             <img class="sidebar-profile-picture" src="/blog/public/assets/images/dog.jpg"/>
             
@@ -128,7 +128,7 @@ UTF-8的编码规则很简单，只有二条：
         <li class="sidebar-button">
             
                 <a  class="sidebar-button-link "
-                    href="/blog/public/#about
+                    href="#about
                             ">
             
                     <i class="sidebar-button-icon fa fa-lg fa-question"></i>
@@ -176,7 +176,7 @@ UTF-8的编码规则很简单，只有二条：
     
     <div class="post-content markdown main-content-wrap" itemprop="articleBody">
         
-            <h1 id="UTF-8编码">UTF-8编码</h1><blockquote>
+            <h1 id="UTF-8编码"><a href="#UTF-8编码" class="headerlink" title="UTF-8编码"></a>UTF-8编码</h1><blockquote>
 <p>UTF-8是Unicode的实现方式之一。<br>UTF-8最大的一个特点，就是它是一种变长的编码方式。它可以使用1~4个字节表示一个符号，根据不同的符号而变化字节长度。</p>
 </blockquote>
 <p>UTF-8的编码规则很简单，只有二条：</p>
@@ -185,7 +185,7 @@ UTF-8的编码规则很简单，只有二条：
 <li>对于n字节的符号（n&gt;1），第一个字节的前n位都设为1，第n+1位设为0，后面字节的前两位一律设为10。剩下的没有提及的二进制位，全部为这个符号的unicode码。</li>
 </ol>
 <p>解读UTF-8编码非常简单，如果一个字节的第一位是0，则这个字节单独就是一个字符；如果第一位是1，则连续有多少个1，就表示当前字符占用多少个字节。</p>
-<h1 id="Endian:">Endian:</h1><p>数据在内存中的存储，其字节序可分为两种，Big endian和Little endian。对于十六进制表示的两字节数0x1234来说——</p>
+<h1 id="Endian"><a href="#Endian" class="headerlink" title="Endian:"></a>Endian:</h1><p>数据在内存中的存储，其字节序可分为两种，Big endian和Little endian。对于十六进制表示的两字节数0x1234来说——</p>
 <p><strong>Big endian</strong>：</p>
 <p>地址：|0x00|0x01|</p>
 <p>内容：|0x12|0x34|</p>
@@ -195,7 +195,7 @@ UTF-8的编码规则很简单，只有二条：
 <p>内容：|0x34|0x12|</p>
 <p><strong>低地址位存储低位字节</strong>。</p>
 <p>C语言中判断机器是Big endian还是Little endian：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> a = <span class="number">0x1234</span>;</span><br><span class="line">	<span class="keyword">char</span> b = *(<span class="keyword">char</span>*)&amp;a;</span><br><span class="line">	<span class="keyword">if</span>(b == <span class="number">0x12</span>)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"big end\n"</span>);</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"little end\n"</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line"></div><div class="line">	<span class="keyword">int</span> a = <span class="number">0x1234</span>;</div><div class="line">	<span class="keyword">char</span> b = *(<span class="keyword">char</span>*)&amp;a;</div><div class="line">	<span class="keyword">if</span>(b == <span class="number">0x12</span>)</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"big end\n"</span>);</div><div class="line">	<span class="keyword">else</span></div><div class="line">		<span class="built_in">printf</span>(<span class="string">"little end\n"</span>);</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
         
         
@@ -216,7 +216,7 @@ UTF-8的编码规则很简单，只有二条：
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--disabled">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/blog/public/2016/06/28/JavaScript中的相等性判断/"  data-tooltip="JavaScript 中的相等性判断">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -239,17 +239,17 @@ UTF-8的编码规则很简单，只有二条：
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://rocxing.github.io/blog/public/2015/11/04/编码和Endian/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://rocxing.github.io/blog/public/blog/public/2015/11/04/编码和Endian/">
                 <i class="fa fa-google-plus"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://rocxing.github.io/blog/public/2015/11/04/编码和Endian/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://rocxing.github.io/blog/public/blog/public/2015/11/04/编码和Endian/">
                 <i class="fa fa-facebook-official"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://rocxing.github.io/blog/public/2015/11/04/编码和Endian/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://rocxing.github.io/blog/public/blog/public/2015/11/04/编码和Endian/">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
@@ -277,7 +277,7 @@ UTF-8的编码规则很简单，只有二条：
 
                 <footer id="footer" class="main-content-wrap">
     <span class="copyrights">
-        Copyrights &copy; 2015 RocXing. All Rights Reserved.
+        Copyrights &copy; 2016 RocXing. All Rights Reserved.
     </span>
 </footer>
 
@@ -289,7 +289,7 @@ UTF-8的编码规则很简单，只有二条：
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--disabled">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/blog/public/2016/06/28/JavaScript中的相等性判断/"  data-tooltip="JavaScript 中的相等性判断">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -312,17 +312,17 @@ UTF-8的编码规则很简单，只有二条：
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://rocxing.github.io/blog/public/2015/11/04/编码和Endian/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://rocxing.github.io/blog/public/blog/public/2015/11/04/编码和Endian/">
                 <i class="fa fa-google-plus"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://rocxing.github.io/blog/public/2015/11/04/编码和Endian/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://rocxing.github.io/blog/public/blog/public/2015/11/04/编码和Endian/">
                 <i class="fa fa-facebook-official"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://rocxing.github.io/blog/public/2015/11/04/编码和Endian/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://rocxing.github.io/blog/public/blog/public/2015/11/04/编码和Endian/">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
@@ -346,17 +346,17 @@ UTF-8的编码规则很简单，只有二条：
                 <div id="share-options-bar" class="share-options-bar" data-behavior="1">
     <ul class="share-options">
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://rocxing.github.io/blog/public/2015/11/04/编码和Endian/">
+            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://rocxing.github.io/blog/public/blog/public/2015/11/04/编码和Endian/">
                 <i class="fa fa-google-plus"></i><span class="">Share on Google Plus</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://rocxing.github.io/blog/public/2015/11/04/编码和Endian/">
+            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://rocxing.github.io/blog/public/blog/public/2015/11/04/编码和Endian/">
                 <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://rocxing.github.io/blog/public/2015/11/04/编码和Endian/">
+            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://rocxing.github.io/blog/public/blog/public/2015/11/04/编码和Endian/">
                 <i class="fa fa-twitter"></i><span>Share on Twitter</span>
             </a>
         </li>
@@ -398,7 +398,7 @@ UTF-8的编码规则很简单，只有二条：
         <div id="cover" style="background-image:url('/blog/public/assets/images/cover.jpg');"></div>
     </body>
     <!--SCRIPTS-->
-<script src="/blog/public/assets/js/script.min.js" type="text/javascript"></script>
+<script src="/blog/public/assets/js/script.min.js"></script>
 <!--SCRIPTS END-->
 
 

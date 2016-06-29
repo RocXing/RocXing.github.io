@@ -5,23 +5,41 @@
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="RocXing&#39; BLOG">
-    <title>我的博客上线啦 - RocXing&#39; BLOG</title>
+    <title>JavaScript 中的相等性判断 - RocXing&#39; BLOG</title>
     <meta name="author" content="RocXing">
     <meta name="description" content="RocXing&#39; BLOG">
     
     
         <link rel="alternative" type="application/atom+xml" title="RSS" href="/blog/public/atom.xml">
     
-    <meta name="description" content="2015.8.18，我的博客终于上线了不过还不大习惯Markdown的语法=.=接下来熟悉一下语法应该就可以写文章了总之先放到github上去。。。。">
+    <meta name="description" content="JavaScript 中的相等性判断JavaScript 提供三种不同的比较操作符：
+
+严格相等，使用 ===
+（非严格）相等，使用 ==
+Object.is （ECMAScript 6 新特性）
+
+两等号判等会在比较时进行类型转换；三等号判等不会进行类型转换（如果类型不同会直接返回 false ）； Object.is 在三等号判等的基础上特别处理了 NaN 、 -0 和 +0 ，保证 -0 和">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="我的博客上线啦">
-<meta property="og:url" content="http://rocxing.github.io/blog/public/2015/08/18/我的博客上线啦/index.html">
+<meta property="og:title" content="JavaScript 中的相等性判断">
+<meta property="og:url" content="http://rocxing.github.io/blog/public/2016/06/28/JavaScript中的相等性判断/index.html">
 <meta property="og:site_name" content="RocXing' BLOG">
-<meta property="og:description" content="2015.8.18，我的博客终于上线了不过还不大习惯Markdown的语法=.=接下来熟悉一下语法应该就可以写文章了总之先放到github上去。。。。">
-<meta property="og:updated_time" content="2016-06-28T07:05:03.055Z">
+<meta property="og:description" content="JavaScript 中的相等性判断JavaScript 提供三种不同的比较操作符：
+
+严格相等，使用 ===
+（非严格）相等，使用 ==
+Object.is （ECMAScript 6 新特性）
+
+两等号判等会在比较时进行类型转换；三等号判等不会进行类型转换（如果类型不同会直接返回 false ）； Object.is 在三等号判等的基础上特别处理了 NaN 、 -0 和 +0 ，保证 -0 和">
+<meta property="og:updated_time" content="2016-06-28T08:25:08.082Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="我的博客上线啦">
-<meta name="twitter:description" content="2015.8.18，我的博客终于上线了不过还不大习惯Markdown的语法=.=接下来熟悉一下语法应该就可以写文章了总之先放到github上去。。。。">
+<meta name="twitter:title" content="JavaScript 中的相等性判断">
+<meta name="twitter:description" content="JavaScript 中的相等性判断JavaScript 提供三种不同的比较操作符：
+
+严格相等，使用 ===
+（非严格）相等，使用 ==
+Object.is （ECMAScript 6 新特性）
+
+两等号判等会在比较时进行类型转换；三等号判等不会进行类型转换（如果类型不同会直接返回 false ）； Object.is 在三等号判等的基础上特别处理了 NaN 、 -0 和 +0 ，保证 -0 和">
     
     
     
@@ -140,16 +158,16 @@
     
         <div class="post-header main-content-wrap">
     
-        <h1 class="post-title" itemprop="headline">我的博客上线啦</h1>
+        <h1 class="post-title" itemprop="headline">JavaScript 中的相等性判断</h1>
     
     <div class="post-meta">
-    <time  itemprop="datePublished" content="Tue Aug 18 2015 15:59:11 GMT+0800">
-        Aug 18, 2015
+    <time  itemprop="datePublished" content="Tue Jun 28 2016 16:03:13 GMT+0800">
+        Jun 28, 2016
     </time>
     
         <span>in </span>
         
-    <a class="category-link" href="/blog/public/categories/New/">New</a>
+    <a class="category-link" href="/blog/public/categories/JavaScript/">JavaScript</a>
 
 
     
@@ -158,7 +176,17 @@
     
     <div class="post-content markdown main-content-wrap" itemprop="articleBody">
         
-            <h2 id="2015-8-18，我的博客终于上线了"><a href="#2015-8-18，我的博客终于上线了" class="headerlink" title="2015.8.18，我的博客终于上线了"></a>2015.8.18，我的博客终于上线了</h2><p>不过还不大习惯Markdown的语法=.=<br>接下来熟悉一下语法应该就可以写文章了<br>总之先放到github上去。。。。  </p>
+            <h1 id="JavaScript-中的相等性判断"><a href="#JavaScript-中的相等性判断" class="headerlink" title="JavaScript 中的相等性判断"></a>JavaScript 中的相等性判断</h1><p>JavaScript 提供三种不同的比较操作符：</p>
+<ul>
+<li>严格相等，使用 ===</li>
+<li>（非严格）相等，使用 ==</li>
+<li>Object.is （ECMAScript 6 新特性）</li>
+</ul>
+<p>两等号判等会在比较时进行类型转换；三等号判等不会进行类型转换（如果类型不同会直接返回 false ）； Object.is 在三等号判等的基础上特别处理了 NaN 、 -0 和 +0 ，保证 -0 和 +0 不再相同，但 Object.is(NaN, NaN) 会返回 true。（像其他数值一样比较 NaN ——由于 IEEE 754 的规范，无论使用双等号或三等号，比较 NaN 都会得到 false ）</p>
+<h2 id="严格相等"><a href="#严格相等" class="headerlink" title="严格相等 ==="></a>严格相等 ===</h2><p>全等操作符比较两个值是否相等，两个被比较的值在比较前都不进行隐式转换。如果两个被比较的值具有不同的类型，这两个值是不全等的。否则，如果两个被比较的值类型相同，值也相同，并且都不是 number 类型时，两个值全等。最后，如果两个值都是 number 类型，当两个都不是 NaN，并且数值相同，或是两个值分别为 +0 和 -0 时，两个值被认为是全等的。（等式 (x !== x) 成立的唯一情况是 x 的值为 NaN）</p>
+<h2 id="非严格相等"><a href="#非严格相等" class="headerlink" title="非严格相等 =="></a>非严格相等 ==</h2><p>相等操作符比较两个值是否相等，在比较前将两个被比较的值转换为相同类型。在转换后（等式的一边或两边都可能被转换），最终的比较方式等同于全等操作符 === 的比较方式。 相等操作符满足交换律。</p>
+<h2 id="什么时候使用-Object-is-或是三等"><a href="#什么时候使用-Object-is-或是三等" class="headerlink" title="什么时候使用 Object.is 或是三等"></a>什么时候使用 Object.is 或是三等</h2><p>总的来说，除了对待NaN的方式，Object.is唯一让人感兴趣的，是当你需要一些元编程方案时，它对待0的特殊方式，特别是关于属性描述器，即你的工作需要去镜像Object.defineProperty的一些特性时。如果你的工作不需要这些，那你应该避免使用Object.is，使用===来代替。即使你需要比较两个NaN使其结果为true，总的来说编写使用NaN 检查的特例函数(用旧版本ECMAScript的isNaN方法)也会比想出一些计算方法让Object.is不影响不同符号的0的比较更容易些。</p>
+<p>转自MDN <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness" target="_blank" rel="external">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness</a></p>
 
         
         
@@ -170,7 +198,7 @@
             <div class="post-footer-tags">
                 <span class="text-color-light text-small">TAGGED IN</span><br/>
                 
-    <a class="tag tag--primary tag--small t-link" href="/blog/public/tags/博客/">博客</a>
+    <a class="tag tag--primary tag--small t-link" href="/blog/public/tags/JavaScript/">JavaScript</a>
 
             </div>
         
@@ -179,7 +207,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/blog/public/2015/08/20/git引用父节点/"  data-tooltip="git ^和~">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -187,7 +215,7 @@
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--disabled">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/blog/public/2015/11/04/编码和Endian/" data-tooltip="编码和Endian">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
                     <i class="fa fa-angle-right"></i>
@@ -202,17 +230,17 @@
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://rocxing.github.io/blog/public/blog/public/2015/08/18/我的博客上线啦/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://rocxing.github.io/blog/public/blog/public/2016/06/28/JavaScript中的相等性判断/">
                 <i class="fa fa-google-plus"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://rocxing.github.io/blog/public/blog/public/2015/08/18/我的博客上线啦/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://rocxing.github.io/blog/public/blog/public/2016/06/28/JavaScript中的相等性判断/">
                 <i class="fa fa-facebook-official"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://rocxing.github.io/blog/public/blog/public/2015/08/18/我的博客上线啦/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://rocxing.github.io/blog/public/blog/public/2016/06/28/JavaScript中的相等性判断/">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
@@ -252,7 +280,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/blog/public/2015/08/20/git引用父节点/"  data-tooltip="git ^和~">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -260,7 +288,7 @@
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--disabled">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/blog/public/2015/11/04/编码和Endian/" data-tooltip="编码和Endian">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
                     <i class="fa fa-angle-right"></i>
@@ -275,17 +303,17 @@
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://rocxing.github.io/blog/public/blog/public/2015/08/18/我的博客上线啦/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://rocxing.github.io/blog/public/blog/public/2016/06/28/JavaScript中的相等性判断/">
                 <i class="fa fa-google-plus"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://rocxing.github.io/blog/public/blog/public/2015/08/18/我的博客上线啦/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://rocxing.github.io/blog/public/blog/public/2016/06/28/JavaScript中的相等性判断/">
                 <i class="fa fa-facebook-official"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://rocxing.github.io/blog/public/blog/public/2015/08/18/我的博客上线啦/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://rocxing.github.io/blog/public/blog/public/2016/06/28/JavaScript中的相等性判断/">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
@@ -309,17 +337,17 @@
                 <div id="share-options-bar" class="share-options-bar" data-behavior="1">
     <ul class="share-options">
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://rocxing.github.io/blog/public/blog/public/2015/08/18/我的博客上线啦/">
+            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://rocxing.github.io/blog/public/blog/public/2016/06/28/JavaScript中的相等性判断/">
                 <i class="fa fa-google-plus"></i><span class="">Share on Google Plus</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://rocxing.github.io/blog/public/blog/public/2015/08/18/我的博客上线啦/">
+            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://rocxing.github.io/blog/public/blog/public/2016/06/28/JavaScript中的相等性判断/">
                 <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://rocxing.github.io/blog/public/blog/public/2015/08/18/我的博客上线啦/">
+            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://rocxing.github.io/blog/public/blog/public/2016/06/28/JavaScript中的相等性判断/">
                 <i class="fa fa-twitter"></i><span>Share on Twitter</span>
             </a>
         </li>
