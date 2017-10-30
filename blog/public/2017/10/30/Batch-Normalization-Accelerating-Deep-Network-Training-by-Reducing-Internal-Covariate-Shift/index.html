@@ -5,41 +5,31 @@
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="RocXing&#39; BLOG">
-    <title>编码和Endian - RocXing&#39; BLOG</title>
+    <title>Batch Normalization Accelerating Deep Network Training by Reducing Internal Covariate Shift - RocXing&#39; BLOG</title>
     <meta name="author" content="RocXing">
     <meta name="description" content="RocXing&#39; BLOG">
     
     
         <link rel="alternative" type="application/atom+xml" title="RSS" href="/blog/public/atom.xml">
     
-    <meta name="description" content="UTF-8编码
-UTF-8是Unicode的实现方式之一。UTF-8最大的一个特点，就是它是一种变长的编码方式。它可以使用1~4个字节表示一个符号，根据不同的符号而变化字节长度。
-
-UTF-8的编码规则很简单，只有二条：
-
-对于单字节的符号，字节的第一位设为0，后面7位为这个符号的unicode码。因此对于英语字母，UTF-8编码和ASCII码是相同的。
-对于n字节的符号（n&amp;gt;1），第一个字">
+    <meta name="description" content="Batch Normalization是Google于2015年在ICML论文中提出的一种用于加速深度神经网络训练的一种方法。
+在训练深度神经网络时，由于训练过程中每层的连接参数都在通过反向传播不断变化，从而导致每层所学习的输入样本的分布都在发生变化。这种现象被称作Internal Covariate Shift即内部协变量位移，会随着网络的深度增加而放大。内部协变量位移的存在使得在每个训练循环中">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="编码和Endian">
-<meta property="og:url" content="http://rocxing.github.io/blog/public/2015/11/04/编码和Endian/index.html">
+<meta property="og:title" content="Batch Normalization Accelerating Deep Network Training by Reducing Internal Covariate Shift">
+<meta property="og:url" content="http://rocxing.github.io/blog/public/2017/10/30/Batch-Normalization-Accelerating-Deep-Network-Training-by-Reducing-Internal-Covariate-Shift/index.html">
 <meta property="og:site_name" content="RocXing' BLOG">
-<meta property="og:description" content="UTF-8编码
-UTF-8是Unicode的实现方式之一。UTF-8最大的一个特点，就是它是一种变长的编码方式。它可以使用1~4个字节表示一个符号，根据不同的符号而变化字节长度。
-
-UTF-8的编码规则很简单，只有二条：
-
-对于单字节的符号，字节的第一位设为0，后面7位为这个符号的unicode码。因此对于英语字母，UTF-8编码和ASCII码是相同的。
-对于n字节的符号（n&amp;gt;1），第一个字">
-<meta property="og:updated_time" content="2016-06-28T07:05:03.059Z">
+<meta property="og:description" content="Batch Normalization是Google于2015年在ICML论文中提出的一种用于加速深度神经网络训练的一种方法。
+在训练深度神经网络时，由于训练过程中每层的连接参数都在通过反向传播不断变化，从而导致每层所学习的输入样本的分布都在发生变化。这种现象被称作Internal Covariate Shift即内部协变量位移，会随着网络的深度增加而放大。内部协变量位移的存在使得在每个训练循环中">
+<meta property="og:image" content="http://rocxing.github.io/blog/public/blog/public/2017/10/30/Batch-Normalization-Accelerating-Deep-Network-Training-by-Reducing-Internal-Covariate-Shift/formula1.png">
+<meta property="og:image" content="http://rocxing.github.io/blog/public/blog/public/2017/10/30/Batch-Normalization-Accelerating-Deep-Network-Training-by-Reducing-Internal-Covariate-Shift/formula2.png">
+<meta property="og:image" content="http://rocxing.github.io/blog/public/blog/public/2017/10/30/Batch-Normalization-Accelerating-Deep-Network-Training-by-Reducing-Internal-Covariate-Shift/formula4.png">
+<meta property="og:image" content="http://rocxing.github.io/blog/public/blog/public/2017/10/30/Batch-Normalization-Accelerating-Deep-Network-Training-by-Reducing-Internal-Covariate-Shift/formula3.png">
+<meta property="og:updated_time" content="2017-10-30T08:37:35.618Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="编码和Endian">
-<meta name="twitter:description" content="UTF-8编码
-UTF-8是Unicode的实现方式之一。UTF-8最大的一个特点，就是它是一种变长的编码方式。它可以使用1~4个字节表示一个符号，根据不同的符号而变化字节长度。
-
-UTF-8的编码规则很简单，只有二条：
-
-对于单字节的符号，字节的第一位设为0，后面7位为这个符号的unicode码。因此对于英语字母，UTF-8编码和ASCII码是相同的。
-对于n字节的符号（n&amp;gt;1），第一个字">
+<meta name="twitter:title" content="Batch Normalization Accelerating Deep Network Training by Reducing Internal Covariate Shift">
+<meta name="twitter:description" content="Batch Normalization是Google于2015年在ICML论文中提出的一种用于加速深度神经网络训练的一种方法。
+在训练深度神经网络时，由于训练过程中每层的连接参数都在通过反向传播不断变化，从而导致每层所学习的输入样本的分布都在发生变化。这种现象被称作Internal Covariate Shift即内部协变量位移，会随着网络的深度增加而放大。内部协变量位移的存在使得在每个训练循环中">
+<meta name="twitter:image" content="http://rocxing.github.io/blog/public/blog/public/2017/10/30/Batch-Normalization-Accelerating-Deep-Network-Training-by-Reducing-Internal-Covariate-Shift/formula1.png">
     
     
     
@@ -158,16 +148,16 @@ UTF-8的编码规则很简单，只有二条：
     
         <div class="post-header main-content-wrap">
     
-        <h1 class="post-title" itemprop="headline">编码和Endian</h1>
+        <h1 class="post-title" itemprop="headline">Batch Normalization Accelerating Deep Network Training by Reducing Internal Covariate Shift</h1>
     
     <div class="post-meta">
-    <time  itemprop="datePublished" content="Wed Nov 04 2015 13:17:42 GMT+0800">
-        Nov 04, 2015
+    <time  itemprop="datePublished" content="Mon Oct 30 2017 15:08:31 GMT+0800">
+        Oct 30, 2017
     </time>
     
         <span>in </span>
         
-    <a class="category-link" href="/blog/public/categories/计算机基础/">计算机基础</a>
+    <a class="category-link" href="/blog/public/categories/Machine-Learning/">Machine Learning</a>
 
 
     
@@ -176,26 +166,16 @@ UTF-8的编码规则很简单，只有二条：
     
     <div class="post-content markdown main-content-wrap" itemprop="articleBody">
         
-            <h1 id="UTF-8编码"><a href="#UTF-8编码" class="headerlink" title="UTF-8编码"></a>UTF-8编码</h1><blockquote>
-<p>UTF-8是Unicode的实现方式之一。<br>UTF-8最大的一个特点，就是它是一种变长的编码方式。它可以使用1~4个字节表示一个符号，根据不同的符号而变化字节长度。</p>
-</blockquote>
-<p>UTF-8的编码规则很简单，只有二条：</p>
-<ol>
-<li>对于单字节的符号，字节的第一位设为0，后面7位为这个符号的unicode码。因此对于英语字母，UTF-8编码和ASCII码是相同的。</li>
-<li>对于n字节的符号（n&gt;1），第一个字节的前n位都设为1，第n+1位设为0，后面字节的前两位一律设为10。剩下的没有提及的二进制位，全部为这个符号的unicode码。</li>
-</ol>
-<p>解读UTF-8编码非常简单，如果一个字节的第一位是0，则这个字节单独就是一个字符；如果第一位是1，则连续有多少个1，就表示当前字符占用多少个字节。</p>
-<h1 id="Endian"><a href="#Endian" class="headerlink" title="Endian:"></a>Endian:</h1><p>数据在内存中的存储，其字节序可分为两种，Big endian和Little endian。对于十六进制表示的两字节数0x1234来说——</p>
-<p><strong>Big endian</strong>：</p>
-<p>地址：|0x00|0x01|</p>
-<p>内容：|0x12|0x34|</p>
-<p><strong>低地址位存储高位字节</strong>，就像我们生活中正常写数字一样，从左到右读，数位由高到低。</p>
-<p><strong>Little endian</strong>:</p>
-<p>地址：|0x00|0x01|</p>
-<p>内容：|0x34|0x12|</p>
-<p><strong>低地址位存储低位字节</strong>。</p>
-<p>C语言中判断机器是Big endian还是Little endian：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line"></div><div class="line">	<span class="keyword">int</span> a = <span class="number">0x1234</span>;</div><div class="line">	<span class="keyword">char</span> b = *(<span class="keyword">char</span>*)&amp;a;</div><div class="line">	<span class="keyword">if</span>(b == <span class="number">0x12</span>)</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"big end\n"</span>);</div><div class="line">	<span class="keyword">else</span></div><div class="line">		<span class="built_in">printf</span>(<span class="string">"little end\n"</span>);</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+            <p>Batch Normalization是Google于2015年在ICML论文中提出的一种用于加速深度神经网络训练的一种方法。</p>
+<p>在训练深度神经网络时，由于训练过程中每层的连接参数都在通过反向传播不断变化，从而导致每层所学习的输入样本的分布都在发生变化。这种现象被称作Internal Covariate Shift即内部协变量位移，会随着网络的深度增加而放大。内部协变量位移的存在使得在每个训练循环中，参数都必须重调以补偿输入分布的改变，限制了更大学习速率的使用。同时易使非线性神经元如sigmoid、tanh饱和，导致深度网络的梯度消失，这致使需要谨慎小心的初始化网络的参数。</p>
+<img src="/blog/public/2017/10/30/Batch-Normalization-Accelerating-Deep-Network-Training-by-Reducing-Internal-Covariate-Shift/formula1.png" alt="formula1.png" title="">
+<p>Batch Normalization通过固定每层输入的均值与方差，大大降低了内部协变量位移的影响，减少了对在参数规模上梯度和初始化的依赖，从而允许更大的学习速率，降低了发散的风险，加快了深度神经网络的训练。</p>
+<img src="/blog/public/2017/10/30/Batch-Normalization-Accelerating-Deep-Network-Training-by-Reducing-Internal-Covariate-Shift/formula2.png" alt="formula2.png" title="">
+<p>与将每层输入进行Whitening即白化处理不同，Batch Normalization做出了只独立计算期望与方差的简化，不需要对每个样本都计算协方差矩阵与逆，降低了计算成本。期望与方差只使用mini-batch估计，以适应随机梯度下降算法。为了为确保每层规范化后的输入与原输入仍是恒等变换，引入了两对参数，用以保证每层的非线性学习能力。</p>
+<img src="/blog/public/2017/10/30/Batch-Normalization-Accelerating-Deep-Network-Training-by-Reducing-Internal-Covariate-Shift/formula4.png" alt="formula4.png" title="">
+<p>另外，Batch Normalization使得每个训练样本都与整个mini-batch相关，消除了对某个特征的强依赖，因此具有一定的Regularization效果，甚至不再需要Dropout。</p>
+<img src="/blog/public/2017/10/30/Batch-Normalization-Accelerating-Deep-Network-Training-by-Reducing-Internal-Covariate-Shift/formula3.png" alt="formula3.png" title="">
+<p>通过链式法则，可以得出Batch Normalization变换的导数。</p>
 
         
         
@@ -207,7 +187,7 @@ UTF-8的编码规则很简单，只有二条：
             <div class="post-footer-tags">
                 <span class="text-color-light text-small">TAGGED IN</span><br/>
                 
-    <a class="tag tag--primary tag--small t-link" href="/blog/public/tags/计算机基础/">计算机基础</a>
+    <a class="tag tag--primary tag--small t-link" href="/blog/public/tags/Machine-Learning/">Machine Learning</a>
 
             </div>
         
@@ -216,7 +196,7 @@ UTF-8的编码规则很简单，只有二条：
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/blog/public/2016/06/28/JavaScript中的相等性判断/"  data-tooltip="JavaScript 中的相等性判断">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -224,7 +204,7 @@ UTF-8的编码规则很简单，只有二条：
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/blog/public/2015/08/26/Git中级用户的25个提示/" data-tooltip="Git中级用户的25个提示">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/blog/public/2016/06/28/JavaScript中的相等性判断/" data-tooltip="JavaScript 中的相等性判断">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
                     <i class="fa fa-angle-right"></i>
@@ -239,17 +219,17 @@ UTF-8的编码规则很简单，只有二条：
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://rocxing.github.io/blog/public/blog/public/2015/11/04/编码和Endian/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://rocxing.github.io/blog/public/blog/public/2017/10/30/Batch-Normalization-Accelerating-Deep-Network-Training-by-Reducing-Internal-Covariate-Shift/">
                 <i class="fa fa-google-plus"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://rocxing.github.io/blog/public/blog/public/2015/11/04/编码和Endian/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://rocxing.github.io/blog/public/blog/public/2017/10/30/Batch-Normalization-Accelerating-Deep-Network-Training-by-Reducing-Internal-Covariate-Shift/">
                 <i class="fa fa-facebook-official"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://rocxing.github.io/blog/public/blog/public/2015/11/04/编码和Endian/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://rocxing.github.io/blog/public/blog/public/2017/10/30/Batch-Normalization-Accelerating-Deep-Network-Training-by-Reducing-Internal-Covariate-Shift/">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
@@ -289,7 +269,7 @@ UTF-8的编码规则很简单，只有二条：
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/blog/public/2016/06/28/JavaScript中的相等性判断/"  data-tooltip="JavaScript 中的相等性判断">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -297,7 +277,7 @@ UTF-8的编码规则很简单，只有二条：
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/blog/public/2015/08/26/Git中级用户的25个提示/" data-tooltip="Git中级用户的25个提示">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/blog/public/2016/06/28/JavaScript中的相等性判断/" data-tooltip="JavaScript 中的相等性判断">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
                     <i class="fa fa-angle-right"></i>
@@ -312,17 +292,17 @@ UTF-8的编码规则很简单，只有二条：
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://rocxing.github.io/blog/public/blog/public/2015/11/04/编码和Endian/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://rocxing.github.io/blog/public/blog/public/2017/10/30/Batch-Normalization-Accelerating-Deep-Network-Training-by-Reducing-Internal-Covariate-Shift/">
                 <i class="fa fa-google-plus"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://rocxing.github.io/blog/public/blog/public/2015/11/04/编码和Endian/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://rocxing.github.io/blog/public/blog/public/2017/10/30/Batch-Normalization-Accelerating-Deep-Network-Training-by-Reducing-Internal-Covariate-Shift/">
                 <i class="fa fa-facebook-official"></i>
             </a>
         </li>
         <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://rocxing.github.io/blog/public/blog/public/2015/11/04/编码和Endian/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://rocxing.github.io/blog/public/blog/public/2017/10/30/Batch-Normalization-Accelerating-Deep-Network-Training-by-Reducing-Internal-Covariate-Shift/">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
@@ -346,17 +326,17 @@ UTF-8的编码规则很简单，只有二条：
                 <div id="share-options-bar" class="share-options-bar" data-behavior="1">
     <ul class="share-options">
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://rocxing.github.io/blog/public/blog/public/2015/11/04/编码和Endian/">
+            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://rocxing.github.io/blog/public/blog/public/2017/10/30/Batch-Normalization-Accelerating-Deep-Network-Training-by-Reducing-Internal-Covariate-Shift/">
                 <i class="fa fa-google-plus"></i><span class="">Share on Google Plus</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://rocxing.github.io/blog/public/blog/public/2015/11/04/编码和Endian/">
+            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://rocxing.github.io/blog/public/blog/public/2017/10/30/Batch-Normalization-Accelerating-Deep-Network-Training-by-Reducing-Internal-Covariate-Shift/">
                 <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
             </a>
         </li>
         <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://rocxing.github.io/blog/public/blog/public/2015/11/04/编码和Endian/">
+            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://rocxing.github.io/blog/public/blog/public/2017/10/30/Batch-Normalization-Accelerating-Deep-Network-Training-by-Reducing-Internal-Covariate-Shift/">
                 <i class="fa fa-twitter"></i><span>Share on Twitter</span>
             </a>
         </li>

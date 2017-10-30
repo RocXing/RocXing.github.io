@@ -5,7 +5,7 @@
   <link href="/blog/public/atom.xml" rel="self"/>
   
   <link href="http://rocxing.github.io/blog/public/"/>
-  <updated>2016-06-28T08:25:08.082Z</updated>
+  <updated>2017-10-30T08:37:35.618Z</updated>
   <id>http://rocxing.github.io/blog/public/</id>
   
   <author>
@@ -14,6 +14,39 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Batch Normalization Accelerating Deep Network Training by Reducing Internal Covariate Shift</title>
+    <link href="http://rocxing.github.io/blog/public/2017/10/30/Batch-Normalization-Accelerating-Deep-Network-Training-by-Reducing-Internal-Covariate-Shift/"/>
+    <id>http://rocxing.github.io/blog/public/2017/10/30/Batch-Normalization-Accelerating-Deep-Network-Training-by-Reducing-Internal-Covariate-Shift/</id>
+    <published>2017-10-30T07:08:31.000Z</published>
+    <updated>2017-10-30T08:37:35.618Z</updated>
+    
+    <content type="html">&lt;p&gt;Batch Normalization是Google于2015年在ICML论文中提出的一种用于加速深度神经网络训练的一种方法。&lt;/p&gt;
+&lt;p&gt;在训练深度神经网络时，由于训练过程中每层的连接参数都在通过反向传播不断变化，从而导致每层所学习的输入样本的分布都在发生变化。这种现象被称作Internal Covariate Shift即内部协变量位移，会随着网络的深度增加而放大。内部协变量位移的存在使得在每个训练循环中，参数都必须重调以补偿输入分布的改变，限制了更大学习速率的使用。同时易使非线性神经元如sigmoid、tanh饱和，导致深度网络的梯度消失，这致使需要谨慎小心的初始化网络的参数。&lt;/p&gt;
+&lt;img src=&quot;/blog/public/2017/10/30/Batch-Normalization-Accelerating-Deep-Network-Training-by-Reducing-Internal-Covariate-Shift/formula1.png&quot; alt=&quot;formula1.png&quot; title=&quot;&quot;&gt;
+&lt;p&gt;Batch Normalization通过固定每层输入的均值与方差，大大降低了内部协变量位移的影响，减少了对在参数规模上梯度和初始化的依赖，从而允许更大的学习速率，降低了发散的风险，加快了深度神经网络的训练。&lt;/p&gt;
+&lt;img src=&quot;/blog/public/2017/10/30/Batch-Normalization-Accelerating-Deep-Network-Training-by-Reducing-Internal-Covariate-Shift/formula2.png&quot; alt=&quot;formula2.png&quot; title=&quot;&quot;&gt;
+&lt;p&gt;与将每层输入进行Whitening即白化处理不同，Batch Normalization做出了只独立计算期望与方差的简化，不需要对每个样本都计算协方差矩阵与逆，降低了计算成本。期望与方差只使用mini-batch估计，以适应随机梯度下降算法。为了为确保每层规范化后的输入与原输入仍是恒等变换，引入了两对参数，用以保证每层的非线性学习能力。&lt;/p&gt;
+&lt;img src=&quot;/blog/public/2017/10/30/Batch-Normalization-Accelerating-Deep-Network-Training-by-Reducing-Internal-Covariate-Shift/formula4.png&quot; alt=&quot;formula4.png&quot; title=&quot;&quot;&gt;
+&lt;p&gt;另外，Batch Normalization使得每个训练样本都与整个mini-batch相关，消除了对某个特征的强依赖，因此具有一定的Regularization效果，甚至不再需要Dropout。&lt;/p&gt;
+&lt;img src=&quot;/blog/public/2017/10/30/Batch-Normalization-Accelerating-Deep-Network-Training-by-Reducing-Internal-Covariate-Shift/formula3.png&quot; alt=&quot;formula3.png&quot; title=&quot;&quot;&gt;
+&lt;p&gt;通过链式法则，可以得出Batch Normalization变换的导数。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Batch Normalization是Google于2015年在ICML论文中提出的一种用于加速深度神经网络训练的一种方法。&lt;/p&gt;
+&lt;p&gt;在训练深度神经网络时，由于训练过程中每层的连接参数都在通过反向传播不断变化，从而导致每层所学习的输入样本的分布都在发生变化。这种现象
+    
+    </summary>
+    
+      <category term="Machine Learning" scheme="http://rocxing.github.io/blog/public/categories/Machine-Learning/"/>
+    
+    
+      <category term="Machine Learning" scheme="http://rocxing.github.io/blog/public/tags/Machine-Learning/"/>
+    
+  </entry>
   
   <entry>
     <title>JavaScript 中的相等性判断</title>
