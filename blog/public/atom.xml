@@ -5,7 +5,7 @@
   <link href="/blog/public/atom.xml" rel="self"/>
   
   <link href="http://rocxing.github.io/blog/public/"/>
-  <updated>2017-11-08T07:52:11.345Z</updated>
+  <updated>2017-11-08T08:00:09.877Z</updated>
   <id>http://rocxing.github.io/blog/public/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://rocxing.github.io/blog/public/2017/11/07/Dynamic-Routing-Between-Capsules/"/>
     <id>http://rocxing.github.io/blog/public/2017/11/07/Dynamic-Routing-Between-Capsules/</id>
     <published>2017-11-07T09:21:24.000Z</published>
-    <updated>2017-11-08T07:52:11.345Z</updated>
+    <updated>2017-11-08T08:00:09.877Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;有“深度学习之父”与“神经网络先驱”之称的Geoffrey E. Hinton终于在NIPS 2017大会上发表了酝酿已久的一篇关于Capsule的论文《Dynamic Routing Between Capsules》。&lt;/p&gt;
@@ -49,10 +49,11 @@
 &lt;p&gt;PrimaryCaps和DigitCaps之间还有一个权重矩阵Wij，代表Capsule i 和Capsule j 的输出向量（8维和16维）之间的权重。同一个通道里的Capsule共享相同的权重。接着PrimaryCaps的是一个DigitCaps，这个可以看做是一个预测层，共有10个Capsule，每个Capsule对应0~9共10个数字，然后每个Capsule的输出是一个16维的向量。&lt;/p&gt;
 &lt;img src=&quot;/blog/public/2017/11/07/Dynamic-Routing-Between-Capsules/9.png&quot; alt=&quot;9.png&quot; title=&quot;&quot;&gt;
 &lt;p&gt;解码器用于将DigitCaps里正确数字对应的Capsule向量，通过三层全连接模型，重新构建出输入的数字图片。重构损失由与原像素强度的平方差之和定义，并且有一个为0.0005的系数以确保在训练过程中不会过度影响边际损失。&lt;/p&gt;
+&lt;img src=&quot;/blog/public/2017/11/07/Dynamic-Routing-Between-Capsules/10.png&quot; alt=&quot;10.png&quot; title=&quot;&quot;&gt;
 &lt;blockquote&gt;
 &lt;p&gt;最后的实验结果标明DigitCaps Capsule所学习到的表达具有更强大鲁棒性，在未进行对自由变换图形训练的情况下能够较CNN更好的识别自由变换的数字。与此同时，动态路由机制保证了网络层之间传递信息过程中没有损失过多，允许高层Capsule同时受到低层多个活跃Capsule的影响，因此还能够分离高度重合的数字。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;img src=&quot;/blog/public/2017/11/07/Dynamic-Routing-Between-Capsules/10.png&quot; alt=&quot;10.png&quot; title=&quot;&quot;&gt;</content>
+</content>
     
     <summary type="html">
     
